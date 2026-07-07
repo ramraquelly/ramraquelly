@@ -22,6 +22,19 @@
   --step-home-title: clamp(3.25rem, 5vw, 5.75rem);
 }
 
+html[data-theme="dark"] {
+  --bg: #11100d;
+  --panel: #1d1a14;
+  --ink: #f4ead7;
+  --muted: #c5bca9;
+  --soft: #a79d89;
+  --line: #393428;
+  --green: #d0c2a2;
+  --blue: #b6c7c9;
+  --red: #d6aaa0;
+  --gold: #d8bd82;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -53,8 +66,8 @@ a {
   gap: 36px;
   height: var(--header);
   padding: 0 var(--pad);
-  border-bottom: 1px solid rgba(23, 23, 21, 0.12);
-  background: rgba(247, 244, 237, 0.96);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  background: color-mix(in srgb, var(--bg) 94%, var(--panel));
   backdrop-filter: blur(10px);
 }
 
@@ -82,16 +95,23 @@ a {
   font-size: var(--step-small);
 }
 
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .language-switch {
   display: inline-flex;
   gap: 4px;
   padding: 4px;
-  border: 1px solid rgba(23, 23, 21, 0.14);
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
   border-radius: 999px;
-  background: rgba(255, 254, 250, 0.72);
+  background: color-mix(in srgb, var(--panel) 72%, transparent);
 }
 
-.language-switch button {
+.language-switch button,
+.theme-toggle {
   min-width: 34px;
   min-height: 28px;
   border: 0;
@@ -104,10 +124,85 @@ a {
   cursor: pointer;
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  background: color-mix(in srgb, var(--panel) 76%, transparent);
+  color: var(--ink);
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
 .language-switch button.active,
-.language-switch button:hover {
+.language-switch button:hover,
+.theme-toggle:hover {
   background: var(--ink);
   color: var(--bg);
+}
+
+.theme-toggle .theme-dark-label {
+  display: inline;
+}
+
+.theme-toggle .theme-light-label {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .theme-dark-label {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .theme-light-label {
+  display: inline;
+}
+
+html[data-theme="dark"] img {
+  filter: saturate(0.86) contrast(0.96);
+}
+
+html[data-theme="dark"] .home-statement,
+html[data-theme="dark"] .hero-art,
+html[data-theme="dark"] .visual-row,
+html[data-theme="dark"] .abstract-panel,
+html[data-theme="dark"] .area-card,
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .project-map a,
+html[data-theme="dark"] .project-proof,
+html[data-theme="dark"] .profile-photo,
+html[data-theme="dark"] .profile-facts div,
+html[data-theme="dark"] .career-item,
+html[data-theme="dark"] .education-table,
+html[data-theme="dark"] .competency-card,
+html[data-theme="dark"] .country-map,
+html[data-theme="dark"] .case-hero,
+html[data-theme="dark"] .case-details,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .contact-form,
+html[data-theme="dark"] .contact-topics,
+html[data-theme="dark"] .page-end {
+  border-color: color-mix(in srgb, var(--ink) 14%, transparent);
+  background-color: color-mix(in srgb, var(--panel) 84%, #000);
+}
+
+html[data-theme="dark"] .project-card {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--cat-soft) 16%, var(--bg)) 0 90px, color-mix(in srgb, var(--panel) 88%, #000) 90px);
+}
+
+html[data-theme="dark"] .area-card {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--area-soft) 20%, var(--panel)), color-mix(in srgb, var(--panel) 86%, #000));
+}
+
+html[data-theme="dark"] .filter,
+html[data-theme="dark"] .area-tags button,
+html[data-theme="dark"] .button,
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  border-color: color-mix(in srgb, var(--ink) 18%, transparent);
+  background-color: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--ink);
 }
 
 .nav a {

@@ -2,6 +2,26 @@ const filterButtons = document.querySelectorAll(".filter");
 const projectCards = document.querySelectorAll(".project-card");
 const projectMapLinks = document.querySelectorAll("[data-map-filter]");
 const areaProjectButtons = document.querySelectorAll(".area-tags button[data-href]");
+const themeButtons = document.querySelectorAll(".theme-toggle");
+
+const setTheme = (theme) => {
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem("ramon-site-theme", theme);
+  themeButtons.forEach((button) => {
+    const isDark = theme === "dark";
+    button.setAttribute("aria-pressed", String(isDark));
+    button.setAttribute("title", isDark ? "Usar tema claro" : "Usar tema escuro");
+  });
+};
+
+setTheme(localStorage.getItem("ramon-site-theme") || "light");
+
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const currentTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+    setTheme(currentTheme === "dark" ? "light" : "dark");
+  });
+});
 
 const setFilter = (filter) => {
   filterButtons.forEach((button) => button.classList.toggle("active", button.dataset.filter === filter));
