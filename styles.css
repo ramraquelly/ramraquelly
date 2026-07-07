@@ -45,11 +45,16 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ink) 3.5%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--ink) 2.5%, transparent) 1px, transparent 1px),
+    var(--bg);
+  background-size: 96px 96px, 96px 96px, auto;
   color: var(--ink);
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: var(--step-body);
   line-height: 1.5;
+  top: 0 !important;
 }
 
 a {
@@ -103,8 +108,8 @@ a {
 
 .language-switch {
   display: inline-flex;
-  gap: 4px;
-  padding: 4px;
+  gap: 2px;
+  padding: 3px;
   border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
   border-radius: 999px;
   background: color-mix(in srgb, var(--panel) 72%, transparent);
@@ -112,8 +117,8 @@ a {
 
 .language-switch button,
 .theme-toggle {
-  min-width: 34px;
-  min-height: 28px;
+  min-width: 30px;
+  min-height: 26px;
   border: 0;
   border-radius: 999px;
   background: transparent;
@@ -128,11 +133,19 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 38px;
+  min-width: 34px;
+  font-size: 1rem;
   border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
   background: color-mix(in srgb, var(--panel) 76%, transparent);
   color: var(--ink);
   transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+body > .skiptranslate {
+  display: none !important;
 }
 
 .language-switch button.active,
