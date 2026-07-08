@@ -2756,15 +2756,74 @@ dd {
     height: auto;
     align-items: flex-start;
     flex-direction: column;
-    padding: 18px;
+    gap: 18px;
+    padding: 22px 18px 18px;
   }
 
   main {
     padding-top: 0;
   }
 
+  .brand,
+  .brand.signature {
+    font-size: clamp(2rem, 12vw, 2.85rem);
+  }
+
   .nav {
     flex-wrap: wrap;
+    order: 2;
+    width: 100%;
+    gap: 16px 24px;
+    font-size: clamp(1.35rem, 7vw, 1.9rem);
+  }
+
+  .header-actions {
+    order: 3;
+    display: flex;
+    position: static;
+    width: 100%;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .language-switch button,
+  .theme-toggle,
+  .search-toggle {
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 0.98rem;
+  }
+
+  .language-current {
+    min-width: 48px;
+  }
+
+  .search-toggle span::before {
+    left: 10px;
+    top: 9px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .search-toggle span::after {
+    left: 22px;
+    top: 25px;
+    width: 10px;
+  }
+
+  .site-search-panel {
+    left: 18px;
+    right: 18px;
+    top: calc(100% - 8px);
+    width: auto;
+  }
+
+  .home-hero {
+    padding-top: 28px;
+  }
+
+  .home-statement {
+    padding-top: 56px;
   }
 
   .home-hero,
