@@ -3255,6 +3255,13 @@ html[data-theme="dark"] .home-statement {
 }
 
 @media (max-width: 760px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .project-gallery {
     gap: 18px;
   }
@@ -3350,6 +3357,125 @@ html[data-theme="dark"] .home-statement {
 
   .project-proof.wide-proof img {
     aspect-ratio: 1.45 / 1;
+  }
+}
+
+/* Emergency mobile header containment */
+@media (max-width: 760px) {
+  .topbar {
+    position: static !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    gap: 12px !important;
+    padding: 18px 16px 14px !important;
+    overflow: hidden !important;
+  }
+
+  .brand,
+  .brand.signature {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+    white-space: normal !important;
+    font-size: clamp(2rem, 10vw, 2.65rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  .nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 10px 18px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    font-size: clamp(1.05rem, 5.1vw, 1.45rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .nav a {
+    flex: 0 0 auto !important;
+    max-width: max-content !important;
+    padding: 4px 0 !important;
+  }
+
+  .header-actions {
+    position: static !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    order: initial !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+    margin: 2px 0 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .language-switch,
+  .theme-toggle,
+  .search-toggle {
+    position: relative !important;
+    flex: 0 0 auto !important;
+  }
+
+  .language-switch button,
+  .theme-toggle,
+  .search-toggle {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
+  }
+
+  .language-current {
+    width: 50px !important;
+    min-width: 50px !important;
+  }
+
+  .language-menu {
+    left: 0 !important;
+    right: auto !important;
+    top: calc(100% + 8px) !important;
+  }
+
+  .site-search-panel {
+    position: absolute !important;
+    left: 16px !important;
+    right: 16px !important;
+    top: calc(100% + 8px) !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  main {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding-top: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .home-hero {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 24px 16px 36px !important;
+    overflow: hidden !important;
+  }
+
+  .home-statement {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 28px 18px !important;
   }
 }
 
