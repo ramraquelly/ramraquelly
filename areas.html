@@ -21,14 +21,21 @@
       <div class="header-actions">
 
         <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false"><span class="theme-dark-label" aria-hidden="true">☾</span><span class="theme-light-label" aria-hidden="true">☀</span></button>
-
+        <button class="search-toggle" type="button" aria-label="Pesquisar no site" aria-expanded="false"><span aria-hidden="true"></span></button>
         <div class="language-switch" aria-label="Idioma">
-        <button type="button" data-lang="pt">PT</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="es">ES</button>
-      </div>
+          <button class="language-current" type="button" aria-haspopup="true" aria-expanded="false"><span class="current-lang">PT</span></button>
+          <div class="language-menu" role="menu">
+            <button type="button" data-lang="pt" role="menuitem">PT</button>
+            <button type="button" data-lang="en" role="menuitem">ENG</button>
+            <button type="button" data-lang="es" role="menuitem">ES</button>
+          </div>
+        </div>
 
       </div>
+    <div class="site-search-panel" role="search" aria-label="Busca no site" hidden>
+      <label><span>Pesquisar</span><input class="site-search-input" type="search" placeholder="Projetos, áreas, parceiros..."></label>
+      <div class="site-search-results" aria-live="polite"></div>
+    </div>
     </header>
 
     <main>
@@ -44,6 +51,7 @@
         <article class="area-card tone-sage">
           <div class="card-mark mark-hex"><span class="micro-shape micro-hex"></span></div>
           <p class="area-index">01</p>
+          <p class="area-question">Como transformar território em projeto?</p>
           <h2>Sustentabilidade e território</h2>
           <p>Transição ecológica, justiça climática, mobilidade sustentável e leitura territorial.</p>
           <div class="area-tags"><button type="button" data-href="projetos/oei.html">OEI</button><button type="button" data-href="projetos/trajects.html">TRAJECTS</button><button type="button" data-href="projetos/cipsem.html">CIPSEM</button><button type="button" data-href="projetos/oeco.html">((o))eco</button></div>
@@ -52,6 +60,7 @@
         <article class="area-card tone-clay">
           <div class="card-mark mark-dot"><span class="micro-shape micro-dot"></span></div>
           <p class="area-index">02</p>
+          <p class="area-question">Como conectar políticas públicas, sustentabilidade e impacto social?</p>
           <h2>Diversidade e políticas públicas</h2>
           <p>Educação inclusiva, relações étnico-raciais, direitos humanos, governança e monitoramento.</p>
           <div class="area-tags"><button type="button" data-href="projetos/unesco-mec.html">UNESCO/MEC</button><button type="button" data-href="projetos/portal-clic.html">CLIC</button><button type="button" data-href="projetos/catalise.html">Catálise</button><button type="button" data-href="projetos/oei.html">OEI</button></div>
@@ -60,6 +69,7 @@
         <article class="area-card tone-sand">
           <div class="card-mark mark-tri"><span class="micro-shape micro-tri"></span></div>
           <p class="area-index">03</p>
+          <p class="area-question">Como comunicar cultura sem simplificar sua complexidade?</p>
           <h2>Cultura, memória e comunicação</h2>
           <p>Produção executiva, mediação cultural, patrimônio, audiovisual, podcasts e narrativa pública.</p>
           <div class="area-tags"><button type="button" data-href="projetos/lista-preta.html">Lista Preta</button><button type="button" data-href="projetos/ibermuseos.html">Ibermuseus</button><button type="button" data-href="projetos/gata-audiovisual.html">Gata Audiovisual</button><button type="button" data-href="projetos/urach.html">Urach</button></div>
@@ -68,6 +78,7 @@
         <article class="area-card tone-blue">
           <div class="card-mark mark-block"><span class="micro-shape micro-block"></span></div>
           <p class="area-index">04</p>
+          <p class="area-question">Como organizar informação para tomada de decisão?</p>
           <h2>Dados, avaliação e estratégia</h2>
           <p>Indicadores, BI, relatórios técnicos, diagnóstico institucional e tomada de decisão.</p>
           <div class="area-tags"><button type="button" data-href="projetos/portal-clic.html">Portal CLIC</button><button type="button" data-href="projetos/unesco-mec.html">UNESCO/MEC</button><button type="button" data-href="projetos/labic.html">LABIC-UY</button><button type="button" data-href="projetos/catalise.html">Catálise</button></div>
@@ -137,6 +148,9 @@
     <script src="site.js"></script>
   </body>
 </html>
+
+
+
 
 
 

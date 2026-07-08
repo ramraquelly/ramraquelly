@@ -21,14 +21,21 @@
       <div class="header-actions">
 
         <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false"><span class="theme-dark-label" aria-hidden="true">☾</span><span class="theme-light-label" aria-hidden="true">☀</span></button>
-
+        <button class="search-toggle" type="button" aria-label="Pesquisar no site" aria-expanded="false"><span aria-hidden="true"></span></button>
         <div class="language-switch" aria-label="Idioma">
-        <button type="button" data-lang="pt">PT</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="es">ES</button>
-      </div>
+          <button class="language-current" type="button" aria-haspopup="true" aria-expanded="false"><span class="current-lang">PT</span></button>
+          <div class="language-menu" role="menu">
+            <button type="button" data-lang="pt" role="menuitem">PT</button>
+            <button type="button" data-lang="en" role="menuitem">ENG</button>
+            <button type="button" data-lang="es" role="menuitem">ES</button>
+          </div>
+        </div>
 
       </div>
+    <div class="site-search-panel" role="search" aria-label="Busca no site" hidden>
+      <label><span>Pesquisar</span><input class="site-search-input" type="search" placeholder="Projetos, áreas, parceiros..."></label>
+      <div class="site-search-results" aria-live="polite"></div>
+    </div>
     </header>
 
     <main>
@@ -37,8 +44,21 @@
           <div class="home-statement">
             <div class="home-kicker"><p class="eyebrow">Portfólio profissional</p></div>
             <h1>Ramón Raquelly</h1>
-            <p class="lead home-lead">Internacionalista com formação multidisciplinar.</p>
-            <p class="home-brief">Atuo na gestão de projetos em sustentabilidade, inovação, cultura, audiovisual e na criação de políticas públicas.</p>
+            <p class="lead home-lead">Transformo contextos complexos em projetos públicos, culturais e socioambientais executáveis.</p>
+            <p class="home-brief">Pesquisa, planejamento, comunicação e entrega para instituições, territórios e equipes técnicas.</p>
+            <ol class="method-line" aria-label="Método de trabalho">
+              <li>Diagnóstico</li>
+              <li>Desenho</li>
+              <li>Implementação</li>
+              <li>Monitoramento</li>
+              <li>Comunicação</li>
+            </ol>
+            <div class="home-stats" aria-label="Números de autoridade">
+              <span><strong>10+</strong> anos</span>
+              <span><strong>60+</strong> projetos</span>
+              <span><strong>15+</strong> instituições</span>
+              <span><strong>12</strong> países</span>
+            </div>
           </div>
         </div>
         <div class="hero-art" aria-label="Links principais">
@@ -87,6 +107,9 @@
     <script src="site.js"></script>
   </body>
 </html>
+
+
+
 
 
 

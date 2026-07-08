@@ -3,6 +3,37 @@ const projectCards = document.querySelectorAll(".project-card");
 const projectMapLinks = document.querySelectorAll("[data-map-filter]");
 const areaProjectButtons = document.querySelectorAll(".area-tags button[data-href]");
 const themeButtons = document.querySelectorAll(".theme-toggle");
+const searchToggle = document.querySelector(".search-toggle");
+const searchPanel = document.querySelector(".site-search-panel");
+const searchInput = document.querySelector(".site-search-input");
+const searchResults = document.querySelector(".site-search-results");
+const languageSwitch = document.querySelector(".language-switch");
+const languageCurrent = document.querySelector(".language-current");
+const currentLang = document.querySelector(".current-lang");
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector(".form-status");
+
+const searchItems = [
+  ["Home", "index.html", "apresentação método números"],
+  ["Sobre", "sobre.html", "perfil experiência formação competências"],
+  ["Áreas", "areas.html", "sustentabilidade cultura políticas públicas dados"],
+  ["Projetos", "projetos.html", "galeria portfolio cases"],
+  ["Contato", "contato.html", "email linkedin currículo"],
+  ["OEI", "projetos/oei.html", "transformação ecológica nordeste sustentabilidade território"],
+  ["UNESCO / MEC", "projetos/unesco-mec.html", "pneerq pdde equidade políticas públicas dados"],
+  ["TRAJECTS", "projetos/trajects.html", "global academy transição justa cape town"],
+  ["INSPIRE", "projetos/inspire.html", "energia renovável pesquisa áfrica do sul"],
+  ["CIPSEM", "projetos/cipsem.html", "tu dresden mobilidade sustentável"],
+  ["Ceibal", "projetos/ceibal.html", "diversidade inclusão tecnologia educação"],
+  ["LABIC-UY", "projetos/labic.html", "inovação cidadã laboratório uruguai"],
+  ["Lista Preta", "projetos/lista-preta.html", "audiovisual cultura negra podcast"],
+  ["((o))eco", "projetos/oeco.html", "oásis da leste jornalismo ambiental"],
+  ["DiaTV", "projetos/diatv.html", "audiovisual comunicação apresentação"],
+  ["Gata Audiovisual", "projetos/gata-audiovisual.html", "blogueirinha audiovisual entrevista"],
+  ["Urach", "projetos/urach.html", "podcast baú griô"],
+  ["Ibermuseus", "projetos/ibermuseos.html", "museus patrimônio cultura"],
+  ["Embaixada Preta", "projetos/embaixada-preta.html", "workshop projetos criativos tecnologia"]
+];
 
 const setTheme = (theme) => {
   document.documentElement.dataset.theme = theme;
@@ -21,6 +52,46 @@ themeButtons.forEach((button) => {
     const currentTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
     setTheme(currentTheme === "dark" ? "light" : "dark");
   });
+});
+
+const renderSearch = (query = "") => {
+  if (!searchResults) return;
+  const normalized = query.trim().toLowerCase();
+  const results = searchItems
+    .filter(([title, , terms]) => !normalized || `${title} ${terms}`.toLowerCase().includes(normalized))
+    .slice(0, 6);
+  searchResults.innerHTML = results.length
+    ? results.map(([title, href]) => `<a href="${href}">${title}</a>`).join("")
+    : "<p>Nenhum resultado direto.</p>";
+};
+
+searchToggle?.addEventListener("click", () => {
+  const isOpen = !searchPanel?.hidden;
+  if (!searchPanel) return;
+  searchPanel.hidden = isOpen;
+  searchToggle.setAttribute("aria-expanded", String(!isOpen));
+  if (!isOpen) {
+    renderSearch(searchInput?.value || "");
+    window.setTimeout(() => searchInput?.focus(), 20);
+  }
+});
+
+searchInput?.addEventListener("input", () => renderSearch(searchInput.value));
+
+document.addEventListener("click", (event) => {
+  if (searchPanel && !searchPanel.hidden && !searchPanel.contains(event.target) && !searchToggle?.contains(event.target)) {
+    searchPanel.hidden = true;
+    searchToggle?.setAttribute("aria-expanded", "false");
+  }
+  if (languageSwitch && !languageSwitch.contains(event.target)) {
+    languageSwitch.classList.remove("open");
+    languageCurrent?.setAttribute("aria-expanded", "false");
+  }
+});
+
+languageCurrent?.addEventListener("click", () => {
+  const isOpen = languageSwitch?.classList.toggle("open");
+  languageCurrent.setAttribute("aria-expanded", String(Boolean(isOpen)));
 });
 
 const setFilter = (filter) => {
@@ -100,6 +171,9 @@ langButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const lang = button.dataset.lang;
     langButtons.forEach((item) => item.classList.toggle("active", item === button));
+    if (currentLang) currentLang.textContent = lang === "en" ? "ENG" : lang.toUpperCase();
+    languageSwitch?.classList.remove("open");
+    languageCurrent?.setAttribute("aria-expanded", "false");
     localStorage.setItem("ramon-site-lang", lang);
     document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
     setTranslateCookie(lang);
@@ -120,7 +194,38 @@ langButtons.forEach((button) => {
 
 const selectedLang = localStorage.getItem("ramon-site-lang") || "pt";
 document.querySelector(`[data-lang="${selectedLang}"]`)?.classList.add("active");
+if (currentLang) currentLang.textContent = selectedLang === "en" ? "ENG" : selectedLang.toUpperCase();
 if (selectedLang !== "pt") {
   setTranslateCookie(selectedLang);
   loadGoogleTranslate();
 }
+
+contactForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const submitButton = contactForm.querySelector("button[type='submit']");
+  const originalLabel = submitButton?.textContent || "Enviar mensagem";
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando...";
+  }
+  if (formStatus) formStatus.textContent = "";
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" }
+    });
+
+    if (!response.ok) throw new Error("Falha no envio");
+    contactForm.reset();
+    if (formStatus) formStatus.textContent = "Mensagem enviada. Obrigado pelo contato.";
+  } catch (error) {
+    if (formStatus) formStatus.textContent = "Não foi possível enviar agora. Use ramonraquelly@gmail.com.";
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = originalLabel;
+    }
+  }
+});

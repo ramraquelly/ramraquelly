@@ -21,14 +21,21 @@
       <div class="header-actions">
 
         <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false"><span class="theme-dark-label" aria-hidden="true">☾</span><span class="theme-light-label" aria-hidden="true">☀</span></button>
-
+        <button class="search-toggle" type="button" aria-label="Pesquisar no site" aria-expanded="false"><span aria-hidden="true"></span></button>
         <div class="language-switch" aria-label="Idioma">
-        <button type="button" data-lang="pt">PT</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="es">ES</button>
-      </div>
+          <button class="language-current" type="button" aria-haspopup="true" aria-expanded="false"><span class="current-lang">PT</span></button>
+          <div class="language-menu" role="menu">
+            <button type="button" data-lang="pt" role="menuitem">PT</button>
+            <button type="button" data-lang="en" role="menuitem">ENG</button>
+            <button type="button" data-lang="es" role="menuitem">ES</button>
+          </div>
+        </div>
 
       </div>
+    <div class="site-search-panel" role="search" aria-label="Busca no site" hidden>
+      <label><span>Pesquisar</span><input class="site-search-input" type="search" placeholder="Projetos, áreas, parceiros..."></label>
+      <div class="site-search-results" aria-live="polite"></div>
+    </div>
     </header>
 
     <main>
@@ -65,7 +72,7 @@
           <div class="project-body">
             <p class="project-place">Ibermuseus</p>
             <h2>12&ordm; Encontro Ibero-Americano de Museus</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Oficina selecionada sobre diversidade, media&ccedil;&atilde;o cultural e apropria&ccedil;&atilde;o social do patrim&ocirc;nio.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Oficina selecionada para o 12&ordm; Encontro Ibero-Americano de Museus, em Santo Domingo. A proposta discute diversidade, media&ccedil;&atilde;o cultural e apropria&ccedil;&atilde;o social do patrim&ocirc;nio como pr&aacute;ticas de participa&ccedil;&atilde;o, acesso e leitura cr&iacute;tica dos territ&oacute;rios.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Ibermuseus, Minist&eacute;rio da Cultura do Brasil, UNESCO</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -88,7 +95,7 @@
           <div class="project-body">
             <p class="project-place">((o))eco</p>
             <h2>O O&aacute;sis da Leste</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> S&eacute;rie jornal&iacute;stica sobre C&oacute;rrego Tiquatira, territ&oacute;rio, pertencimento e recupera&ccedil;&atilde;o urbana na Zona Leste de S&atilde;o Paulo.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> S&eacute;rie jornal&iacute;stica sobre o C&oacute;rrego Tiquatira e o parque linear que atravessa a Zona Leste de S&atilde;o Paulo. O projeto conecta mem&oacute;ria territorial, pertencimento, recupera&ccedil;&atilde;o urbana e justi&ccedil;a ambiental para mostrar como infraestrutura verde tamb&eacute;m &eacute; disputa de cidade.</p>
             <p class="project-partners"><strong>Parceiros:</strong> ((o))eco, Bolsa Vandr&eacute; Fonseca de Jornalismo Ambiental</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -111,7 +118,7 @@
           <div class="project-body">
             <p class="project-place">Gata Audiovisual</p>
             <h2>Encontro com a Blogueirinha</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Produto audiovisual de entretenimento digital do Encontro com a Blogueirinha. Atua&ccedil;&atilde;o em produ&ccedil;&atilde;o, participa&ccedil;&atilde;o em entrevista e din&acirc;micas do programa.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Produto audiovisual de entretenimento digital do Encontro com a Blogueirinha. A participa&ccedil;&atilde;o combinou produ&ccedil;&atilde;o, entrevista e presen&ccedil;a em din&acirc;micas do programa, dentro de uma linguagem pop, direta e pensada para plataformas sociais.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Blogueirinha</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -133,7 +140,7 @@
           <div class="project-body">
             <p class="project-place">DiaTV</p>
             <h2>Voc&ecirc; na DiaTV 2</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Produto audiovisual de entretenimento e sele&ccedil;&atilde;o de talentos da DiaTV. Participa&ccedil;&atilde;o como um dos apresentadores selecionados para o Voc&ecirc; na DiaTV 2.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Produto audiovisual de entretenimento e sele&ccedil;&atilde;o de talentos da DiaTV. Ram&oacute;n participou como um dos apresentadores selecionados para o Voc&ecirc; na DiaTV 2, em formato voltado a presen&ccedil;a de c&acirc;mera, improviso, comunica&ccedil;&atilde;o e cultura digital.</p>
             <p class="project-partners"><strong>Parceiros:</strong> DiaTV</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -155,7 +162,7 @@
           <div class="project-body">
             <p class="project-place">Ba&uacute; Explica + Gri&ocirc; Podcasts</p>
             <h2>Urach: Fama, F&eacute; e F&uacute;ria</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Podcast narrativo sobre fama, m&iacute;dia, moralidade p&uacute;blica e cultura digital a partir da trajet&oacute;ria de Andressa Urach. Atua&ccedil;&atilde;o como diretor, apresentador e roteirista, com trilha sonora autoral.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Podcast narrativo sobre fama, m&iacute;dia, moralidade p&uacute;blica e cultura digital a partir da trajet&oacute;ria de Andressa Urach. Ram&oacute;n atuou como diretor, apresentador e roteirista, com trilha sonora autoral e constru&ccedil;&atilde;o editorial voltada a escuta, tens&atilde;o narrativa e debate p&uacute;blico.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Ba&uacute; Explica, Gri&ocirc; Podcasts</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -178,7 +185,7 @@
           <div class="project-body">
             <p class="project-place">UNESCO Brasil / Minist&eacute;rio da Educa&ccedil;&atilde;o</p>
             <h2>V&aacute;rios projetos</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Gest&atilde;o, monitoramento e apoio t&eacute;cnico a pol&iacute;ticas federais de educa&ccedil;&atilde;o, diversidade, equidade e rela&ccedil;&otilde;es &eacute;tnico-raciais.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Conjunto de projetos de coopera&ccedil;&atilde;o t&eacute;cnica com foco em educa&ccedil;&atilde;o, equidade, diversidade, rela&ccedil;&otilde;es &eacute;tnico-raciais e prote&ccedil;&atilde;o escolar. A atua&ccedil;&atilde;o reuniu gest&atilde;o, monitoramento, dados, painel de acompanhamento e apoio t&eacute;cnico a pol&iacute;ticas federais conduzidas pelo MEC e pela SECADI.</p>
             <p class="project-partners"><strong>Parceiros:</strong> UNESCO Brasil, MEC, SECADI</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -201,7 +208,7 @@
           <div class="project-body">
             <p class="project-place">OEI / Open Society Foundations / Cons&oacute;rcio Nordeste</p>
             <h2>Plano Brasil Nordeste de Transforma&ccedil;&atilde;o Ecol&oacute;gica</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Plano regional de transforma&ccedil;&atilde;o ecol&oacute;gica do Cons&oacute;rcio Nordeste, constru&iacute;do para territorializar a agenda nacional de transi&ccedil;&atilde;o ecol&oacute;gica nos nove estados da regi&atilde;o, com foco em justi&ccedil;a clim&aacute;tica, bioeconomia, energia limpa, financiamento sustent&aacute;vel e desenvolvimento produtivo de baixo carbono.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Plano regional do Cons&oacute;rcio Nordeste para transformar a agenda de transi&ccedil;&atilde;o ecol&oacute;gica em estrat&eacute;gias concretas para os nove estados da regi&atilde;o. O trabalho articula justi&ccedil;a clim&aacute;tica, bioeconomia, energia limpa, financiamento sustent&aacute;vel e desenvolvimento produtivo de baixo carbono a partir dos ativos, desigualdades e capacidades territoriais do Nordeste.</p>
             <p class="project-partners"><strong>Parceiros:</strong> OEI, Open Society Foundations, Cons&oacute;rcio Nordeste</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -224,7 +231,7 @@
           <div class="project-body">
             <p class="project-place">Embaixada Preta S&atilde;o Paulo / Feira Preta</p>
             <h2>Workshop Projetos Criativos e Solu&ccedil;&otilde;es Tecnol&oacute;gicas</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Workshop gratuito de tr&ecirc;s encontros para artistas, criadores, empreendedores e ativistas transformarem ideias em projetos culturais reais. Atua&ccedil;&atilde;o como produtor executivo e especialista em inova&ccedil;&atilde;o social, conduzindo forma&ccedil;&atilde;o sobre idea&ccedil;&atilde;o, capta&ccedil;&atilde;o de recursos, ferramentas digitais, metodologias &aacute;geis e gest&atilde;o de projetos criativos.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Workshop gratuito de tr&ecirc;s encontros para artistas, criadores, empreendedores e ativistas transformarem ideias em projetos culturais reais. Ram&oacute;n conduziu a forma&ccedil;&atilde;o como produtor executivo e especialista em inova&ccedil;&atilde;o social, conectando idea&ccedil;&atilde;o, capta&ccedil;&atilde;o de recursos, ferramentas digitais, metodologias &aacute;geis e gest&atilde;o de projetos criativos.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Embaixada Preta S&atilde;o Paulo, Feira Preta</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -246,12 +253,12 @@
           <div class="project-body">
             <p class="project-place">TRAJECTS / Technische Universit&auml;t Berlin / DAAD Global Centres</p>
             <h2>Global Academy 2025 (Cape Town, South Africa)</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Programa internacional da rede TRAJECTS sobre crise clim&aacute;tica, transi&ccedil;&atilde;o justa e futuros regenerativos, realizado na Cidade do Cabo, com participa&ccedil;&atilde;o de pesquisadores, centros globais e redes do Sul Global.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Global Academy organizada pela Technische Universit&auml;t Berlin no &acirc;mbito da rede TRAJECTS e dos DAAD Global Centres, realizada na Cidade do Cabo. A experi&ecirc;ncia reuniu pesquisadores e centros internacionais para discutir crise clim&aacute;tica, respostas tecnocr&aacute;ticas, transi&ccedil;&atilde;o justa e futuros regenerativos a partir do Sul Global.</p>
             <p class="project-partners"><strong>Parceiros:</strong> TRAJECTS, Technische Universit&auml;t Berlin, DAAD Global Centres</p>
             <details class="project-details">
               <summary>Detalhes</summary>
               <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Participa&ccedil;&atilde;o na Global Academy 2025 e apoio &agrave; comunica&ccedil;&atilde;o digital da rede, com organiza&ccedil;&atilde;o de conte&uacute;dos, registros e materiais institucionais ligados &agrave; transi&ccedil;&atilde;o justa.</dd></div>
+                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Participa&ccedil;&atilde;o na Global Academy 2025 e contribui&ccedil;&atilde;o para comunica&ccedil;&atilde;o digital, organiza&ccedil;&atilde;o de registros e materiais institucionais ligados &agrave; transi&ccedil;&atilde;o justa.</dd></div>
                 <div><dt>Comprova&ccedil;&otilde;es</dt><dd>P&aacute;ginas oficiais da TRAJECTS sobre a Global Academy 2025, incluindo registros da programa&ccedil;&atilde;o, cobertura em Cape Town e publica&ccedil;&otilde;es associadas aos DAAD Global Centres.</dd></div>
                 <div><dt>Contexto</dt><dd>A Global Academy 2025 foi organizada pela Technische Universit&auml;t Berlin no &acirc;mbito da rede TRAJECTS e dos DAAD Global Centres.</dd></div>
               </dl>
@@ -269,7 +276,7 @@
           <div class="project-body">
             <p class="project-place">INSPIRE / University of Cape Town</p>
             <h2>Junior Research Fellow / Pesquisador em Transi&ccedil;&atilde;o Energ&eacute;tica Justa</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Pesquisar governan&ccedil;a comunit&aacute;ria, participa&ccedil;&atilde;o local e desempenho social em projetos de energia renov&aacute;vel na &Aacute;frica do Sul.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> INSPIRE &eacute; uma iniciativa sediada na University of Cape Town dedicada ao desempenho social em projetos de energia renov&aacute;vel. Como Junior Research Fellow, Ram&oacute;n pesquisou transi&ccedil;&atilde;o energ&eacute;tica justa, Community Trusts, participa&ccedil;&atilde;o local e governan&ccedil;a comunit&aacute;ria no contexto sul-africano.</p>
             <p class="project-partners"><strong>Parceiros:</strong> INSPIRE, University of Cape Town (UCT), TRAJECTS</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -293,7 +300,7 @@
           <div class="project-body">
             <p class="project-place">CIPSEM / Technische Universit&auml;t Dresden</p>
             <h2>Curso internacional UNEP/UNESCO/BMUV</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Forma&ccedil;&atilde;o internacional em mobilidade sustent&aacute;vel, governan&ccedil;a clim&aacute;tica e transforma&ccedil;&atilde;o de espa&ccedil;os urbanos na TU Dresden.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Curso internacional da Technische Universit&auml;t Dresden, via CIPSEM, sobre mobilidade sustent&aacute;vel e transforma&ccedil;&atilde;o de espa&ccedil;os urbanos. A experi&ecirc;ncia reuniu profissionais de diferentes pa&iacute;ses para discutir transporte, clima, planejamento urbano e acessibilidade em pol&iacute;ticas p&uacute;blicas.</p>
             <p class="project-partners"><strong>Parceiros:</strong> CIPSEM, Technische Universit&auml;t Dresden (TU Dresden), UNEP, UNESCO, BMUV</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -316,7 +323,7 @@
           <div class="project-body">
             <p class="project-place">Ceibal</p>
             <h2>Oficina de diversidade e inclus&atilde;o com tecnologia</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Oficina sobre cria&ccedil;&atilde;o de projetos em diversidade e inclus&atilde;o usando tecnologia e espa&ccedil;os educativos.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Oficina publicada pelo Ceibal sobre cria&ccedil;&atilde;o de projetos em diversidade e inclus&atilde;o usando tecnologia e espa&ccedil;os educativos. A proposta conectou cidadania digital, aprendizagem colaborativa e desenho de solu&ccedil;&otilde;es para contextos educacionais mais acess&iacute;veis.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Ceibal</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -338,7 +345,7 @@
           <div class="project-body">
             <p class="project-place">LABIC-UY / SEGIB / Ceibal</p>
             <h2>Laborat&oacute;rio de Inova&ccedil;&atilde;o Cidad&atilde; do Uruguai</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Prototipar solu&ccedil;&otilde;es educacionais, digitais e cidad&atilde;s em laborat&oacute;rio ibero-americano.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Laborat&oacute;rio ibero-americano de inova&ccedil;&atilde;o cidad&atilde; realizado no Uruguai, com foco em educa&ccedil;&atilde;o, tecnologia e participa&ccedil;&atilde;o social. A atua&ccedil;&atilde;o passou por cocria&ccedil;&atilde;o, prototipagem e comunica&ccedil;&atilde;o de solu&ccedil;&otilde;es digitais ligadas a demandas reais de escolas e comunidades.</p>
             <p class="project-partners"><strong>Parceiros:</strong> SEGIB, Ceibal, LABIC-UY</p>
             <details class="project-details">
               <summary>Detalhes</summary>
@@ -360,8 +367,9 @@
           <div class="project-body">
             <p class="project-place">Global South Arts & Health</p>
             <h2>Representante Brasileiro 2024</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Representa&ccedil;&atilde;o brasileira em rede internacional de artes e sa&uacute;de voltada a pr&aacute;ticas criativas no Sul Global.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Representa&ccedil;&atilde;o brasileira em rede internacional de artes e sa&uacute;de voltada a pr&aacute;ticas criativas no Sul Global. O projeto articula cultura, cuidado, comunica&ccedil;&atilde;o e sa&uacute;de coletiva para aproximar experi&ecirc;ncias art&iacute;sticas de debates p&uacute;blicos e comunit&aacute;rios.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Global South Arts & Health</p>
+            <div class="project-tags" aria-label="Tags do projeto"><span>Cultura</span><span>Cooperação internacional</span><span>Saúde</span><span>Impacto social</span></div>
             <details class="project-details">
               <summary>Detalhes</summary>
               <dl>
@@ -381,8 +389,9 @@
           <div class="project-body">
             <p class="project-place">Lista Preta</p>
             <h2>Produ&ccedil;&atilde;o executiva e projetos audiovisuais</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Lista Preta &eacute; uma plataforma de jornalismo, audiovisual e cultura negra. Atua&ccedil;&atilde;o na cria&ccedil;&atilde;o, planejamento e execu&ccedil;&atilde;o de projetos audiovisuais e conte&uacute;dos digitais, como podcasts, s&eacute;ries, miniss&eacute;ries e projetos de cultura negra.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Lista Preta &eacute; uma plataforma de jornalismo, audiovisual e cultura negra, com produ&ccedil;&otilde;es voltadas a mem&oacute;ria, territ&oacute;rio, comportamento, entrevista e narrativas negras. Ram&oacute;n atuou na cria&ccedil;&atilde;o, planejamento e execu&ccedil;&atilde;o de projetos audiovisuais e conte&uacute;dos digitais, como podcasts, s&eacute;ries, miniss&eacute;ries e projetos de cultura negra.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Lista Preta</p>
+            <div class="project-tags" aria-label="Tags do projeto"><span>Audiovisual</span><span>Cultura</span><span>Comunicação</span><span>Memória</span></div>
             <details class="project-details">
               <summary>Detalhes</summary>
               <dl>
@@ -404,8 +413,9 @@
           <div class="project-body">
             <p class="project-place">Cat&aacute;lise</p>
             <h2>Projetos de inova&ccedil;&atilde;o e parcerias</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Gest&atilde;o de projetos de inova&ccedil;&atilde;o, parcerias e avalia&ccedil;&atilde;o em educa&ccedil;&atilde;o, diversidade, tecnologia e impacto social.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Atua&ccedil;&atilde;o em gest&atilde;o de projetos de inova&ccedil;&atilde;o, parcerias e avalia&ccedil;&atilde;o em educa&ccedil;&atilde;o, diversidade, tecnologia e impacto social. O trabalho envolveu planejamento, dados, relat&oacute;rios, articula&ccedil;&atilde;o institucional e apoio a iniciativas com organiza&ccedil;&otilde;es p&uacute;blicas, privadas e da sociedade civil.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Cat&aacute;lise, British Council, Instituto Unibanco, Minist&eacute;rio da Sa&uacute;de, Senado Federal</p>
+            <div class="project-tags" aria-label="Tags do projeto"><span>Políticas públicas</span><span>Dados</span><span>Estratégia</span><span>Impacto social</span></div>
             <details class="project-details">
               <summary>Detalhes</summary>
               <dl>
@@ -426,8 +436,9 @@
           <div class="project-body">
             <p class="project-place">Vetor Brasil / Motriz / Prefeitura de S&atilde;o Paulo</p>
             <h2>Portal CLIC</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Estruturar plataforma de gest&atilde;o de pessoas no contexto de inova&ccedil;&atilde;o e moderniza&ccedil;&atilde;o administrativa municipal.</p>
+            <p class="project-objective"><strong>O que &eacute;?</strong> Projeto de lideran&ccedil;a e estrutura&ccedil;&atilde;o do Portal CLIC, plataforma de informa&ccedil;&otilde;es e apoio &agrave; gest&atilde;o de pessoas da Prefeitura de S&atilde;o Paulo. A atua&ccedil;&atilde;o ocorreu no contexto do trainee em gest&atilde;o p&uacute;blica e inova&ccedil;&atilde;o, com diagn&oacute;stico institucional, PMO, moderniza&ccedil;&atilde;o administrativa e articula&ccedil;&atilde;o entre equipes.</p>
             <p class="project-partners"><strong>Parceiros:</strong> Vetor Brasil, Motriz, Secretaria Municipal de Gest&atilde;o de S&atilde;o Paulo</p>
+            <div class="project-tags" aria-label="Tags do projeto"><span>Políticas públicas</span><span>Gestão de projetos</span><span>Dados</span><span>Inovação</span></div>
             <details class="project-details">
               <summary>Detalhes</summary>
               <dl>
@@ -445,9 +456,9 @@
       <section class="page-end" aria-label="Encerramento">
         <div class="sustain-mark" aria-hidden="true"><span class="leaf left"></span><span class="leaf right"></span><span class="soil"></span><span class="sun"></span><span class="grid-unit"></span></div>
         <div class="final-copy">
-          <p class="eyebrow">Projetos selecionados</p>
-          <h2>Portf&oacute;lio em atualiza&ccedil;&atilde;o.</h2>
-          <p>Os links acima re&uacute;nem registros institucionais, publica&ccedil;&otilde;es, not&iacute;cias, plataformas e p&aacute;ginas de parceiros.</p>
+          <p class="eyebrow">Pr&oacute;xima conversa</p>
+          <h2>Vamos estruturar um projeto, pesquisa ou produto?</h2>
+          <p>Trabalho com escuta, diagn&oacute;stico, planejamento e entrega para transformar ideias complexas em a&ccedil;&otilde;es execut&aacute;veis.</p>
           <div class="final-actions"><a class="button" href="sobre.html">Ver trajet&oacute;ria</a><a class="button subtle" href="contato.html">Conversar</a></div>
         </div>
       </section>
@@ -455,6 +466,10 @@
     <script src="site.js"></script>
   </body>
 </html>
+
+
+
+
 
 
 
