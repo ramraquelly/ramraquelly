@@ -2931,13 +2931,14 @@ dd {
   padding-top: 10px;
   border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
+  line-height: 1.18;
 }
 
 .home-stats strong {
   color: var(--ink);
   font-family: "Arial Narrow", "Inter", Arial, Helvetica, sans-serif;
-  font-size: clamp(1.25rem, 1.9vw, 2rem);
+  font-size: clamp(1.2rem, 1.7vw, 1.82rem);
   font-weight: 600;
   line-height: 1;
 }
