@@ -12,6 +12,16 @@ const languageCurrent = document.querySelector(".language-current");
 const currentLang = document.querySelector(".current-lang");
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector(".form-status");
+const methodNodes = document.querySelectorAll(".method-node");
+const methodCaption = document.querySelector(".method-caption");
+
+const methodCopy = {
+  diagnostico: "Leitura de contexto, escuta territorial, análise de dados e definição do problema público ou cultural.",
+  desenho: "Arquitetura do projeto: objetivos, entregas, parceiros, governança, cronograma e critérios de decisão.",
+  implementacao: "Coordenação prática entre equipes, instituições e território para transformar desenho em execução.",
+  monitoramento: "Acompanhamento de indicadores, riscos, evidências, aprendizados e ajustes de rota durante o processo.",
+  comunicacao: "Síntese pública do projeto: relatórios, narrativas, apresentações, produtos digitais e memória institucional."
+};
 
 const searchItems = [
   ["Home", "index.html", "apresentação método números"],
@@ -51,6 +61,14 @@ themeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const currentTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
     setTheme(currentTheme === "dark" ? "light" : "dark");
+  });
+});
+
+methodNodes.forEach((node) => {
+  node.addEventListener("click", () => {
+    methodNodes.forEach((item) => item.classList.remove("active"));
+    node.classList.add("active");
+    if (methodCaption) methodCaption.textContent = methodCopy[node.dataset.method] || "";
   });
 });
 
