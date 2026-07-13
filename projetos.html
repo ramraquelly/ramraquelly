@@ -1,479 +1,199 @@
-﻿<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projetos | Ram&oacute;n Raquelly</title>
-    <meta name="description" content="Galeria de projetos de Ram&oacute;n Raquelly em sustentabilidade, pol&iacute;ticas p&uacute;blicas, cultura, audiovisual, comunica&ccedil;&atilde;o e avalia&ccedil;&atilde;o.">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="brand" href="index.html">Ram&oacute;n Raquelly</a>
-      <nav class="nav" aria-label="Navega&ccedil;&atilde;o principal">
-        <a href="index.html"><span class="nav-icon icon-home" aria-hidden="true"></span>Home</a>
-        <a href="sobre.html"><span class="nav-icon icon-profile" aria-hidden="true"></span>Sobre</a>
-        <a href="areas.html"><span class="nav-icon icon-grid" aria-hidden="true"></span>&Aacute;reas</a>
-        <a class="active" href="projetos.html"><span class="nav-icon icon-portfolio" aria-hidden="true"></span>Projetos</a>
-        <a class="nav-cta" href="contato.html"><span class="nav-icon icon-mail" aria-hidden="true"></span>Contato</a>
-      </nav>
-      <div class="header-actions">
-
-        <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false"><span class="theme-dark-label" aria-hidden="true">☾</span><span class="theme-light-label" aria-hidden="true">☀</span></button>
-        <button class="search-toggle" type="button" aria-label="Pesquisar no site" aria-expanded="false"><span aria-hidden="true"></span></button>
-        <div class="language-switch" aria-label="Idioma">
-          <button class="language-current" type="button" aria-haspopup="true" aria-expanded="false"><span class="current-lang">PT</span></button>
-          <div class="language-menu" role="menu">
-            <button type="button" data-lang="pt" role="menuitem">PT</button>
-            <button type="button" data-lang="en" role="menuitem">ENG</button>
-            <button type="button" data-lang="es" role="menuitem">ES</button>
-          </div>
-        </div>
-
-      </div>
-    <div class="site-search-panel" role="search" aria-label="Busca no site" hidden>
-      <label><span>Pesquisar</span><input class="site-search-input" type="search" placeholder="Projetos, áreas, parceiros..."></label>
-      <div class="site-search-results" aria-live="polite"></div>
-    </div>
-    </header>
-
-    <main>
-      <section class="page-hero two-col project-hero">
-        <div>
-          <p class="eyebrow">Projetos selecionados</p>
-          <h1>Galeria de projetos.</h1>
-        </div>
-        <p class="lead">Projetos em sustentabilidade, diversidade, pol&iacute;ticas p&uacute;blicas, cultura, inova&ccedil;&atilde;o, comunica&ccedil;&atilde;o e avalia&ccedil;&atilde;o, com links para registros, publica&ccedil;&otilde;es e institui&ccedil;&otilde;es.</p>
-      </section>
-
-      <section class="filters" aria-label="Filtros por tema">
-        <button class="filter active" data-filter="todos">Todos</button>
-        <button class="filter" data-filter="sustentabilidade">Sustentabilidade</button>
-        <button class="filter" data-filter="politicas">Pol&iacute;ticas p&uacute;blicas</button>
-        <button class="filter" data-filter="inovacao">Inova&ccedil;&atilde;o e educa&ccedil;&atilde;o</button>
-        <button class="filter" data-filter="cultura">Cultura</button>
-        <button class="filter" data-filter="audiovisual">Audiovisual e comunica&ccedil;&atilde;o</button>
-      </section>
-
-      <section class="project-map" aria-label="Mapa de projetos">
-        <a href="#oeco" data-map-filter="sustentabilidade"><span><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c7.5-.4 12.3-5.2 14-14-8.8 1.7-13.6 6.5-14 14Z"/><path d="M5 19c2.6-4.1 5.8-7.1 10-9"/></svg>Sustentabilidade</span><strong>OEI &middot; TRAJECTS &middot; INSPIRE &middot; CIPSEM</strong></a>
-        <a href="#unesco-mec" data-map-filter="politicas"><span><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 10h12"/><path d="M8 10v10"/><path d="M12 10v10"/><path d="M16 10v10"/><path d="M3 8l9-5 9 5Z"/></svg>Pol&iacute;ticas p&uacute;blicas</span><strong>PNEERQ &middot; UNESCO/MEC &middot; CLIC &middot; Cat&aacute;lise</strong></a>
-        <a href="#ceibal" data-map-filter="inovacao"><span><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M8.4 14.8a6 6 0 1 1 7.2 0c-.7.6-1.1 1.4-1.1 2.2h-5c0-.8-.4-1.6-1.1-2.2Z"/><path d="M12 4v2"/></svg>Inova&ccedil;&atilde;o e educa&ccedil;&atilde;o</span><strong>Ceibal &middot; LABIC-UY &middot; Escola que Protege</strong></a>
-        <a href="#gata-audiovisual" data-map-filter="audiovisual"><span><svg class="cat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15V9l9-3v12Z"/><path d="M13 9h2a4 4 0 0 1 0 8h-2"/><path d="M6 15l2 5h3l-2-5"/></svg>Audiovisual e comunica&ccedil;&atilde;o</span><strong>Gata Audiovisual &middot; DiaTV &middot; Urach &middot; Lista Preta</strong></a>
-      </section>
-
-      <section class="project-gallery project-timeline">
-        <article id="ibermuseos" class="project-card" data-primary="cultura" data-year="2026" data-theme="cultura politicas">
-          <a class="project-media clean-media" href="projetos/ibermuseos.html">
-            <img src="assets/project-covers/ibermuseos-red-cover.png" alt="Logo oficial Ibermuseus">
-            <span>Ibermuseus</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Ibermuseus</p>
-            <h2>12&ordm; Encontro Ibero-Americano de Museus</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Oficina selecionada para o 12&ordm; Encontro Ibero-Americano de Museus, em Santo Domingo. A proposta discute diversidade, media&ccedil;&atilde;o cultural e apropria&ccedil;&atilde;o social do patrim&ocirc;nio como pr&aacute;ticas de participa&ccedil;&atilde;o, acesso e leitura cr&iacute;tica dos territ&oacute;rios.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Ibermuseus, Minist&eacute;rio da Cultura do Brasil, UNESCO</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Projeto</dt><dd>&quot;Diversidade em a&ccedil;&atilde;o: media&ccedil;&atilde;o e apropria&ccedil;&atilde;o social do patrim&ocirc;nio&quot;, selecionado na convocat&oacute;ria de bolsas do 12&ordm; Encontro Ibero-Americano de Museus.</dd></div>
-                <div><dt>Contexto</dt><dd>Santo Domingo, Rep&uacute;blica Dominicana, com foco em museus, diversidade, patrim&ocirc;nio e coopera&ccedil;&atilde;o ibero-americana.</dd></div>
-                <div><dt>Temas</dt><dd>Media&ccedil;&atilde;o cultural, patrim&ocirc;nio, diversidade, participa&ccedil;&atilde;o comunit&aacute;ria e pol&iacute;ticas museais.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/ibermuseos-encontro.png" alt="M&iacute;dia relacionada"></div>
-              <div class="project-actions"><a class="button" href="projetos/ibermuseos.html">Abrir p&aacute;gina</a><a class="button" href="https://www.ibermuseos.org/pt/recursos/noticias/anunciamos-o-resultado-da-convocatria-de-bolsas-para-o-12-encontro-ibero-americano-de-museus/" target="_blank" rel="noreferrer">Acessar resultado</a><a class="button subtle" href="https://12encuentro.ibermuseos.org/" target="_blank" rel="noreferrer">Acessar encontro</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="oeco" class="project-card" data-primary="sustentabilidade" data-year="2026" data-theme="sustentabilidade audiovisual">
-          <a class="project-media" href="projetos/oeco.html">
-            <img src="assets/project-covers/oeco-square-cover.png" alt="Imagem do especial O O&aacute;sis da Leste">
-            <span>((o))eco</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">((o))eco</p>
-            <h2>O O&aacute;sis da Leste</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> S&eacute;rie jornal&iacute;stica sobre o C&oacute;rrego Tiquatira e o parque linear que atravessa a Zona Leste de S&atilde;o Paulo. O projeto conecta mem&oacute;ria territorial, pertencimento, recupera&ccedil;&atilde;o urbana e justi&ccedil;a ambiental para mostrar como infraestrutura verde tamb&eacute;m &eacute; disputa de cidade.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> ((o))eco, Bolsa Vandr&eacute; Fonseca de Jornalismo Ambiental</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Pesquisa, apura&ccedil;&atilde;o, produ&ccedil;&atilde;o documental, edi&ccedil;&atilde;o de &aacute;udio e narrativa jornal&iacute;stica sobre meio ambiente, territ&oacute;rio e desigualdades urbanas.</dd></div>
-                <div><dt>Publica&ccedil;&atilde;o</dt><dd>Especial publicado por ((o))eco em 2026, com reportagens assinadas por Ram&oacute;n Raquelly.</dd></div>
-                <div><dt>Temas</dt><dd>Jornalismo ambiental, C&oacute;rrego Tiquatira, recupera&ccedil;&atilde;o urbana, parque linear, justi&ccedil;a clim&aacute;tica e pol&iacute;tica ambiental.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/project-squares/oeco-square.png" alt="M&iacute;dia relacionada"></div>
-              <div class="project-actions"><a class="button" href="projetos/oeco.html">Abrir p&aacute;gina</a><a class="button" href="https://oeco.org.br/tag/o-oasis-da-leste/" target="_blank" rel="noreferrer">Acessar especial</a><a class="button subtle" href="https://oeco.org.br/author/ramon-raquelly/" target="_blank" rel="noreferrer">Ver autoria</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="gata-audiovisual" class="project-card" data-primary="audiovisual" data-year="2025" data-theme="audiovisual comunicacao">
-          <a class="project-media clean-media" href="projetos/gata-audiovisual.html">
-            <img src="assets/project-covers/gata-audiovisual-logo-square-cover.png" alt="Logo Gata Audiovisual">
-            <span>Gata Audiovisual</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Gata Audiovisual</p>
-            <h2>Encontro com a Blogueirinha</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Produto audiovisual de entretenimento digital do Encontro com a Blogueirinha. A participa&ccedil;&atilde;o combinou produ&ccedil;&atilde;o, entrevista e presen&ccedil;a em din&acirc;micas do programa, dentro de uma linguagem pop, direta e pensada para plataformas sociais.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Blogueirinha</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Produ&ccedil;&atilde;o audiovisual, participa&ccedil;&atilde;o como entrevistado e presen&ccedil;a nas din&acirc;micas do programa.</dd></div>
-                <div><dt>Contexto</dt><dd>Projeto vinculado &agrave; cultura pop, entrevista, entretenimento para redes e din&acirc;micas audiovisuais de programa digital.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/encontro-blogueirinha-poster.png" alt="Encontro com a Blogueirinha"></div>
-              <div class="project-actions"><a class="button" href="projetos/gata-audiovisual.html">Abrir p&aacute;gina</a><a class="button" href="https://www.youtube.com/watch?v=HRT0d5U5FdY" target="_blank" rel="noreferrer">Assistir</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="diatv" class="project-card" data-primary="audiovisual" data-year="2026" data-theme="audiovisual comunicacao">
-          <a class="project-media clean-media" href="projetos/diatv.html">
-            <img src="assets/project-covers/diatv-logo-square-cover.png" alt="Logo DiaTV">
-            <span>DiaTV</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">DiaTV</p>
-            <h2>Voc&ecirc; na DiaTV 2</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Produto audiovisual de entretenimento e sele&ccedil;&atilde;o de talentos da DiaTV. Ram&oacute;n participou como um dos apresentadores selecionados para o Voc&ecirc; na DiaTV 2, em formato voltado a presen&ccedil;a de c&acirc;mera, improviso, comunica&ccedil;&atilde;o e cultura digital.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> DiaTV</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Participa&ccedil;&atilde;o como apresentador selecionado, presen&ccedil;a em din&acirc;micas audiovisuais e integra&ccedil;&atilde;o ao formato de sele&ccedil;&atilde;o de talentos da DiaTV.</dd></div>
-                <div><dt>Temas</dt><dd>Entretenimento, cultura digital, apresenta&ccedil;&atilde;o, audiovisual, sele&ccedil;&atilde;o de talentos e comunica&ccedil;&atilde;o multiplataforma.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/project-squares/voce-na-diatv-2-square.png" alt="Voc&ecirc; na DiaTV 2"></div>
-              <div class="project-actions"><a class="button" href="projetos/diatv.html">Abrir p&aacute;gina</a><a class="button" href="https://www.youtube.com/watch?v=eo6APupUJTU" target="_blank" rel="noreferrer">Assistir</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="urach" class="project-card" data-primary="audiovisual" data-year="2025" data-theme="audiovisual comunicacao">
-          <a class="project-media clean-media" href="projetos/urach.html">
-            <img src="assets/project-covers/bau-logo-black-square-cover.png" alt="Logo Ba&uacute; Explica">
-            <span>Ba&uacute; Explica + Gri&ocirc; Podcasts</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Ba&uacute; Explica + Gri&ocirc; Podcasts</p>
-            <h2>Urach: Fama, F&eacute; e F&uacute;ria</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Podcast narrativo sobre fama, m&iacute;dia, moralidade p&uacute;blica e cultura digital a partir da trajet&oacute;ria de Andressa Urach. Ram&oacute;n atuou como diretor, apresentador e roteirista, com trilha sonora autoral e constru&ccedil;&atilde;o editorial voltada a escuta, tens&atilde;o narrativa e debate p&uacute;blico.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Ba&uacute; Explica, Gri&ocirc; Podcasts</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Dire&ccedil;&atilde;o, apresenta&ccedil;&atilde;o, roteiro, pesquisa narrativa, condu&ccedil;&atilde;o editorial e trilha sonora autoral.</dd></div>
-                <div><dt>Alcance</dt><dd>100 mil plays e 10 milh&otilde;es de visualiza&ccedil;&otilde;es em conte&uacute;dos relacionados ao projeto.</dd></div>
-                <div><dt>Reconhecimento</dt><dd>Selecionado no Pitching Talent do Rio2C 2026, na categoria Podcast.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/urach-fama-fe-furia.png" alt="Urach: Fama, F&eacute; e F&uacute;ria"></div>
-              <div class="project-actions"><a class="button" href="projetos/urach.html">Abrir p&aacute;gina</a><a class="button" href="https://open.spotify.com/show/5mghpdxLnLRBtRswxxoPK0" target="_blank" rel="noreferrer">Ouvir no Spotify</a><a class="button subtle" href="https://www.rio2c.com/mercado/selecionados-talent/" target="_blank" rel="noreferrer">Acessar Rio2C</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="unesco-mec" class="project-card" data-primary="politicas" data-year="2023-2026" data-theme="politicas inovacao">
-          <a class="project-media clean-media" href="projetos/unesco-mec.html">
-            <img src="assets/project-covers/unesco-circle-square-cover.png" alt="Logo oficial UNESCO">
-            <span>UNESCO / MEC</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">UNESCO Brasil / Minist&eacute;rio da Educa&ccedil;&atilde;o</p>
-            <h2>V&aacute;rios projetos</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Conjunto de projetos de coopera&ccedil;&atilde;o t&eacute;cnica com foco em educa&ccedil;&atilde;o, equidade, diversidade, rela&ccedil;&otilde;es &eacute;tnico-raciais e prote&ccedil;&atilde;o escolar. A atua&ccedil;&atilde;o reuniu gest&atilde;o, monitoramento, dados, painel de acompanhamento e apoio t&eacute;cnico a pol&iacute;ticas federais conduzidas pelo MEC e pela SECADI.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> UNESCO Brasil, MEC, SECADI</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Projetos</dt><dd>PNEERQ (Pol&iacute;tica Nacional de Equidade, Educa&ccedil;&atilde;o para as Rela&ccedil;&otilde;es &Eacute;tnico-Raciais e Educa&ccedil;&atilde;o Escolar Quilombola), PDDE Equidade, Escola que Protege, Selo Petronilha, governan&ccedil;a federativa e painel de monitoramento de pol&iacute;ticas p&uacute;blicas.</dd></div>
-                <div><dt>Entregas</dt><dd>Indicadores, dashboards, Power BI, SQL, Databricks, relat&oacute;rios t&eacute;cnicos, planejamento estrat&eacute;gico, acompanhamento de metas e oficinas intersetoriais.</dd></div>
-                <div><dt>Temas</dt><dd>Educa&ccedil;&atilde;o ambiental, educa&ccedil;&atilde;o escolar ind&iacute;gena, educa&ccedil;&atilde;o quilombola, rela&ccedil;&otilde;es &eacute;tnico-raciais, direitos humanos e diversidade.</dd></div>
-              </dl>
-              <div class="project-proof project-proof-grid compact-grid"><img src="assets/project-squares/pneerq-logo-square.png" alt="PNEERQ"><img src="assets/project-squares/pdde-equidade-banner-square.png" alt="PDDE Equidade"><img src="assets/projects/escola-que-protege.png" alt="Escola que Protege"></div>
-              <div class="project-actions"><a class="button" href="projetos/unesco-mec.html">Abrir p&aacute;gina</a><a class="button" href="https://www.gov.br/mec/pt-br/pneerq" target="_blank" rel="noreferrer">Acessar PNEERQ</a><a class="button subtle" href="https://www.gov.br/mec/pt-br/pdde/pdde-equidade" target="_blank" rel="noreferrer">Acessar PDDE Equidade</a><a class="button subtle" href="https://www.gov.br/mec/pt-br/escola-que-protege" target="_blank" rel="noreferrer">Acessar Escola que Protege</a><a class="button subtle" href="https://mecnormas.mec.gov.br/pesquisa/detalhar/8652" target="_blank" rel="noreferrer">Acessar MEC Normas</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="oei" class="project-card" data-primary="sustentabilidade" data-year="2025" data-theme="sustentabilidade politicas">
-          <a class="project-media clean-media" href="projetos/oei.html">
-            <img src="assets/project-covers/oei-pte-cover-full.png" alt="Capa do Plano Brasil Nordeste de Transforma&ccedil;&atilde;o Ecol&oacute;gica">
-            <span>OEI</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">OEI / Open Society Foundations / Cons&oacute;rcio Nordeste</p>
-            <h2>Plano Brasil Nordeste de Transforma&ccedil;&atilde;o Ecol&oacute;gica</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Plano regional do Cons&oacute;rcio Nordeste para transformar a agenda de transi&ccedil;&atilde;o ecol&oacute;gica em estrat&eacute;gias concretas para os nove estados da regi&atilde;o. O trabalho articula justi&ccedil;a clim&aacute;tica, bioeconomia, energia limpa, financiamento sustent&aacute;vel e desenvolvimento produtivo de baixo carbono a partir dos ativos, desigualdades e capacidades territoriais do Nordeste.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> OEI, Open Society Foundations, Cons&oacute;rcio Nordeste</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Mapeamento e sistematiza&ccedil;&atilde;o de pol&iacute;ticas p&uacute;blicas nos nove estados do Nordeste, leitura territorial, levantamento de boas pr&aacute;ticas e apoio t&eacute;cnico &agrave; organiza&ccedil;&atilde;o de recomenda&ccedil;&otilde;es para uma agenda regional de transforma&ccedil;&atilde;o ecol&oacute;gica.</dd></div>
-                <div><dt>Entregas</dt><dd>Entrevistas, diagn&oacute;stico territorial, relat&oacute;rios t&eacute;cnicos, an&aacute;lise comparada e subs&iacute;dios para uma estrat&eacute;gia apresentada no contexto da COP30, em di&aacute;logo com oficinas estaduais e coopera&ccedil;&atilde;o interestadual.</dd></div>
-                <div><dt>Temas</dt><dd>Financiamento sustent&aacute;vel, adensamento tecnol&oacute;gico, bioeconomia, transi&ccedil;&atilde;o energ&eacute;tica, economia circular, infraestrutura, adapta&ccedil;&atilde;o clim&aacute;tica e valoriza&ccedil;&atilde;o dos saberes e ativos territoriais do Nordeste.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/oei-pte-cover.png" alt="Publica&ccedil;&atilde;o"></div>
-              <div class="project-actions"><a class="button" href="projetos/oei.html">Abrir p&aacute;gina</a><a class="button" href="https://oei.int/pt/" target="_blank" rel="noreferrer">Acessar OEI</a><a class="button subtle" href="https://consorcionordeste.gov.br/Plano_Brasil_Nordeste_PTE_DIGITAL.pdf?v=2025-11-10" target="_blank" rel="noreferrer">Ler publica&ccedil;&atilde;o</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="embaixada-preta" class="project-card" data-primary="inovacao" data-year="2025" data-theme="inovacao cultura">
-          <a class="project-media clean-media" href="projetos/embaixada-preta.html">
-            <img src="assets/project-squares/embaixada-preta-logo-square.png" alt="Logo Embaixada Preta">
-            <span>Embaixada Preta</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Embaixada Preta S&atilde;o Paulo / Feira Preta</p>
-            <h2>Workshop Projetos Criativos e Solu&ccedil;&otilde;es Tecnol&oacute;gicas</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Workshop gratuito de tr&ecirc;s encontros para artistas, criadores, empreendedores e ativistas transformarem ideias em projetos culturais reais. Ram&oacute;n conduziu a forma&ccedil;&atilde;o como produtor executivo e especialista em inova&ccedil;&atilde;o social, conectando idea&ccedil;&atilde;o, capta&ccedil;&atilde;o de recursos, ferramentas digitais, metodologias &aacute;geis e gest&atilde;o de projetos criativos.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Embaixada Preta S&atilde;o Paulo, Feira Preta</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Condu&ccedil;&atilde;o do workshop &ldquo;Projetos Criativos e Solu&ccedil;&otilde;es Tecnol&oacute;gicas&rdquo;, com foco em produ&ccedil;&atilde;o cultural, inova&ccedil;&atilde;o social, intelig&ecirc;ncia artificial, planejamento, capta&ccedil;&atilde;o de recursos e transforma&ccedil;&atilde;o de ideias em projetos de impacto.</dd></div>
-                <div><dt>Formato</dt><dd>Tr&ecirc;s encontros presenciais realizados entre 23 e 25 de abril, das 18h30 &agrave;s 21h, na Embaixada Preta S&atilde;o Paulo.</dd></div>
-                <div><dt>Temas</dt><dd>Produ&ccedil;&atilde;o cultural, projetos criativos, impacto social, tecnologias, DeepSeek, ChatGPT, metodologias &aacute;geis, gest&atilde;o e capta&ccedil;&atilde;o de recursos.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/project-covers/embaixada-preta-workshop-cover.png" alt="Flyer do workshop Projetos Criativos e Solu&ccedil;&otilde;es Tecnol&oacute;gicas"></div>
-              <div class="project-actions"><a class="button" href="projetos/embaixada-preta.html">Abrir p&aacute;gina</a><a class="button" href="https://www.instagram.com/p/DIPXmkbxfbP/" target="_blank" rel="noreferrer">Acessar publica&ccedil;&atilde;o</a><a class="button subtle" href="https://www.instagram.com/embaixadapreta_sp/" target="_blank" rel="noreferrer">Ver Embaixada Preta</a></div>
-            </details>
-          </div>
-        </article>
-        <article id="trajects" class="project-card" data-primary="sustentabilidade" data-year="2025" data-theme="sustentabilidade comunicacao">
-          <a class="project-media" href="projetos/trajects.html">
-            <img src="assets/project-covers/trajects-square-cover.png" alt="Logo oficial TRAJECTS">
-            <span>TRAJECTS</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">TRAJECTS / Technische Universit&auml;t Berlin / DAAD Global Centres</p>
-            <h2>Global Academy 2025 (Cape Town, South Africa)</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Global Academy organizada pela Technische Universit&auml;t Berlin no &acirc;mbito da rede TRAJECTS e dos DAAD Global Centres, realizada na Cidade do Cabo. A experi&ecirc;ncia reuniu pesquisadores e centros internacionais para discutir crise clim&aacute;tica, respostas tecnocr&aacute;ticas, transi&ccedil;&atilde;o justa e futuros regenerativos a partir do Sul Global.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> TRAJECTS, Technische Universit&auml;t Berlin, DAAD Global Centres</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Participa&ccedil;&atilde;o na Global Academy 2025 e contribui&ccedil;&atilde;o para comunica&ccedil;&atilde;o digital, organiza&ccedil;&atilde;o de registros e materiais institucionais ligados &agrave; transi&ccedil;&atilde;o justa.</dd></div>
-                <div><dt>Comprova&ccedil;&otilde;es</dt><dd>P&aacute;ginas oficiais da TRAJECTS sobre a Global Academy 2025, incluindo registros da programa&ccedil;&atilde;o, cobertura em Cape Town e publica&ccedil;&otilde;es associadas aos DAAD Global Centres.</dd></div>
-                <div><dt>Contexto</dt><dd>A Global Academy 2025 foi organizada pela Technische Universit&auml;t Berlin no &acirc;mbito da rede TRAJECTS e dos DAAD Global Centres.</dd></div>
-              </dl>
-              <div class="project-proof wide-proof"><img src="assets/projects/trajects-global-academy.jpg" alt="Foto oficial da Global Academy 2025 em Cape Town"></div>
-              <div class="project-actions"><a class="button" href="projetos/trajects.html">Abrir p&aacute;gina</a><a class="button" href="https://trajects.org/" target="_blank" rel="noreferrer">Acessar TRAJECTS</a><a class="button subtle" href="https://trajects.org/news/54" target="_blank" rel="noreferrer">Acessar Global Academy</a><a class="button subtle" href="https://trajects.org/resource-library/item/206" target="_blank" rel="noreferrer">Acessar JRS</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="inspire" class="project-card" data-primary="sustentabilidade" data-year="2025" data-theme="sustentabilidade politicas">
-          <a class="project-media clean-media" href="projetos/inspire.html">
-            <img src="assets/project-covers/inspire-hd-cover.png" alt="Logo oficial INSPIRE">
-            <span>INSPIRE</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">INSPIRE / University of Cape Town</p>
-            <h2>Junior Research Fellow / Pesquisador em Transi&ccedil;&atilde;o Energ&eacute;tica Justa</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> INSPIRE &eacute; uma iniciativa sediada na University of Cape Town dedicada ao desempenho social em projetos de energia renov&aacute;vel. Como Junior Research Fellow, Ram&oacute;n pesquisou transi&ccedil;&atilde;o energ&eacute;tica justa, Community Trusts, participa&ccedil;&atilde;o local e governan&ccedil;a comunit&aacute;ria no contexto sul-africano.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> INSPIRE, University of Cape Town (UCT), TRAJECTS</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Junior Research Fellow / pesquisador em transi&ccedil;&atilde;o energ&eacute;tica justa, com foco em governan&ccedil;a comunit&aacute;ria, participa&ccedil;&atilde;o local e desempenho social.</dd></div>
-                <div><dt>Escopo</dt><dd>Pesquisa sobre Community Trusts no REIPPPP, governan&ccedil;a comunit&aacute;ria, participa&ccedil;&atilde;o local e justi&ccedil;a energ&eacute;tica.</dd></div>
-                <div><dt>Entregas</dt><dd>An&aacute;lise institucional, ferramentas de engajamento local, comunica&ccedil;&atilde;o intercultural e guia visual estrat&eacute;gico sobre justi&ccedil;a energ&eacute;tica.</dd></div>
-                <div><dt>P&ocirc;ster</dt><dd>A biblioteca da TRAJECTS inclui a Posters Collection - Junior Research Stay (JRS) 2025, com Ram&oacute;n Brito entre os pesquisadores listados.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/inspire-hd.png" alt="Logo oficial INSPIRE"></div>
-              <div class="project-actions"><a class="button" href="projetos/inspire.html">Abrir p&aacute;gina</a><a class="button" href="https://inspire-excellence.net/" target="_blank" rel="noreferrer">Acessar INSPIRE</a><a class="button subtle" href="https://trajects.org/resource-library/item/206" target="_blank" rel="noreferrer">Acessar JRS</a><a class="button subtle" href="assets/docs/poster-collection-2025.pdf" target="_blank" rel="noreferrer">Ler cole&ccedil;&atilde;o de p&ocirc;steres</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="cipsem" class="project-card" data-primary="sustentabilidade" data-year="2025" data-theme="sustentabilidade politicas">
-          <a class="project-media clean-media" href="projetos/cipsem.html">
-            <img src="assets/project-covers/cipsem-tu-dresden-cover.png" alt="Logo oficial CIPSEM e TU Dresden">
-            <span>CIPSEM</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">CIPSEM / Technische Universit&auml;t Dresden</p>
-            <h2>Curso internacional UNEP/UNESCO/BMUV</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Curso internacional da Technische Universit&auml;t Dresden, via CIPSEM, sobre mobilidade sustent&aacute;vel e transforma&ccedil;&atilde;o de espa&ccedil;os urbanos. A experi&ecirc;ncia reuniu profissionais de diferentes pa&iacute;ses para discutir transporte, clima, planejamento urbano e acessibilidade em pol&iacute;ticas p&uacute;blicas.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> CIPSEM, Technische Universit&auml;t Dresden (TU Dresden), UNEP, UNESCO, BMUV</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Curso</dt><dd>92nd UNEP/UNESCO/BMUV International Course on Sustainable Mobility: Transforming Urban Spaces, realizado pelo Centre for International Postgraduate Studies of Environmental Management (CIPSEM) da Technische Universit&auml;t Dresden.</dd></div>
-                <div><dt>Contexto</dt><dd>Programa com profissionais de 20 pa&iacute;ses, combinando aulas, estudos de caso, visitas t&eacute;cnicas, relat&oacute;rios por pa&iacute;s e exerc&iacute;cios de negocia&ccedil;&atilde;o.</dd></div>
-                <div><dt>Temas</dt><dd>Mobilidade sustent&aacute;vel, planejamento urbano, clima, pol&iacute;ticas p&uacute;blicas, transporte e espa&ccedil;os urbanos inclusivos.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/cipsem-course.jpg" alt="Turma do curso internacional CIPSEM"></div>
-              <div class="project-actions"><a class="button" href="projetos/cipsem.html">Abrir p&aacute;gina</a><a class="button" href="https://tu-dresden.de/bu/umwelt/cipsem/ueber-cipsem-news/news/cipsem2019s-92nd-unep-unesco-bmukn-short-course-concludes-diverse-perspectives-fresh-momentum-for-sustainable-mobility" target="_blank" rel="noreferrer">Acessar not&iacute;cia</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="ceibal" class="project-card" data-primary="inovacao" data-year="2025" data-theme="inovacao politicas">
-          <a class="project-media clean-media" href="projetos/ceibal.html">
-            <img src="assets/project-covers/ceibal-logo-cover.png" alt="Logo oficial Ceibal">
-            <span>Ceibal</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Ceibal</p>
-            <h2>Oficina de diversidade e inclus&atilde;o com tecnologia</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Oficina publicada pelo Ceibal sobre cria&ccedil;&atilde;o de projetos em diversidade e inclus&atilde;o usando tecnologia e espa&ccedil;os educativos. A proposta conectou cidadania digital, aprendizagem colaborativa e desenho de solu&ccedil;&otilde;es para contextos educacionais mais acess&iacute;veis.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Ceibal</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Contribui&ccedil;&atilde;o metodol&oacute;gica e facilita&ccedil;&atilde;o de aprendizagem em diversidade, inclus&atilde;o digital e desenho de solu&ccedil;&otilde;es educativas.</dd></div>
-                <div><dt>Temas</dt><dd>Tecnologia educacional, acessibilidade, inclus&atilde;o, aprendizagem colaborativa e inova&ccedil;&atilde;o pedag&oacute;gica.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/ceibal-ciudadania-digital.png" alt="Ciudadan&iacute;a digital e inclusi&oacute;n, Ceibal"></div>
-              <div class="project-actions"><a class="button" href="projetos/ceibal.html">Abrir p&aacute;gina</a><a class="button" href="https://ceibal.edu.uy/institucional/articulos/como-crear-proyectos-en-diversidad-e-inclusion-usando-tecnologia-y-espacios-educativos/" target="_blank" rel="noreferrer">Acessar oficina</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="labic" class="project-card" data-primary="inovacao" data-year="2024" data-theme="inovacao politicas">
-          <a class="project-media" href="projetos/labic.html">
-            <img src="assets/project-covers/labic-official-square-cover.png" alt="Identidade oficial LABIC-UY">
-            <span>LABIC-UY</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">LABIC-UY / SEGIB / Ceibal</p>
-            <h2>Laborat&oacute;rio de Inova&ccedil;&atilde;o Cidad&atilde; do Uruguai</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Laborat&oacute;rio ibero-americano de inova&ccedil;&atilde;o cidad&atilde; realizado no Uruguai, com foco em educa&ccedil;&atilde;o, tecnologia e participa&ccedil;&atilde;o social. A atua&ccedil;&atilde;o passou por cocria&ccedil;&atilde;o, prototipagem e comunica&ccedil;&atilde;o de solu&ccedil;&otilde;es digitais ligadas a demandas reais de escolas e comunidades.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> SEGIB, Ceibal, LABIC-UY</p>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Escopo</dt><dd>Cocria&ccedil;&atilde;o de propostas tecnol&oacute;gicas e metodol&oacute;gicas alinhadas a demandas reais de escolas e comunidades locais.</dd></div>
-                <div><dt>Contexto</dt><dd>Laborat&oacute;rio com profissionais da Ibero-Am&eacute;rica, voltado &agrave; inova&ccedil;&atilde;o cidad&atilde; e ao setor educacional uruguaio.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/project-squares/labic-official-square.png" alt="M&iacute;dia relacionada"></div>
-              <div class="project-actions"><a class="button" href="projetos/labic.html">Abrir p&aacute;gina</a><a class="button" href="https://innovacionciudadana.org/2024/08/01/labic-uy-el-laboratorio-de-innovacion-ciudadana-de-uruguay/" target="_blank" rel="noreferrer">Acessar laborat&oacute;rio</a><a class="button subtle" href="https://www.youtube.com/watch?v=OXgtMRoW7M4" target="_blank" rel="noreferrer">Assistir</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="gsah" class="project-card" data-primary="cultura" data-year="2024" data-theme="cultura comunicacao">
-          <a class="project-media" href="projetos/gsah.html">
-            <img src="assets/project-covers/gsah-official-square-cover.png" alt="Imagem oficial Global South Arts & Health">
-            <span>GSAH</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Global South Arts & Health</p>
-            <h2>Representante Brasileiro 2024</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Representa&ccedil;&atilde;o brasileira em rede internacional de artes e sa&uacute;de voltada a pr&aacute;ticas criativas no Sul Global. O projeto articula cultura, cuidado, comunica&ccedil;&atilde;o e sa&uacute;de coletiva para aproximar experi&ecirc;ncias art&iacute;sticas de debates p&uacute;blicos e comunit&aacute;rios.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Global South Arts & Health</p>
-            <div class="project-tags" aria-label="Tags do projeto"><span>Cultura</span><span>Cooperação internacional</span><span>Saúde</span><span>Impacto social</span></div>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Contexto</dt><dd>Rede internacional de artes e sa&uacute;de com profissionais de diferentes pa&iacute;ses, articulando arte, sa&uacute;de, sociedade e comunica&ccedil;&atilde;o intercultural.</dd></div>
-                <div><dt>Temas</dt><dd>Arts and health, Global South, cultural mediation, creative practice and public communication.</dd></div>
-              </dl>
-              <div class="project-actions"><a class="button" href="projetos/gsah.html">Abrir p&aacute;gina</a><a class="button" href="https://gsahw.com/gsah-envoy-2024/" target="_blank" rel="noreferrer">Acessar Envoy 2024</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="lista-preta" class="project-card" data-primary="audiovisual" data-year="2022-2025" data-theme="audiovisual comunicacao">
-          <a class="project-media clean-media" href="projetos/lista-preta.html">
-            <img src="assets/logos/lista-preta.svg" alt="Logo Lista Preta">
-            <span>Lista Preta</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Lista Preta</p>
-            <h2>Produ&ccedil;&atilde;o executiva e projetos audiovisuais</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Lista Preta &eacute; uma plataforma de jornalismo, audiovisual e cultura negra, com produ&ccedil;&otilde;es voltadas a mem&oacute;ria, territ&oacute;rio, comportamento, entrevista e narrativas negras. Ram&oacute;n atuou na cria&ccedil;&atilde;o, planejamento e execu&ccedil;&atilde;o de projetos audiovisuais e conte&uacute;dos digitais, como podcasts, s&eacute;ries, miniss&eacute;ries e projetos de cultura negra.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Lista Preta</p>
-            <div class="project-tags" aria-label="Tags do projeto"><span>Audiovisual</span><span>Cultura</span><span>Comunicação</span><span>Memória</span></div>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Produ&ccedil;&atilde;o executiva, pesquisa, pauta, organiza&ccedil;&atilde;o de materiais, cronogramas, or&ccedil;amento, contratos, fornecedores e articula&ccedil;&atilde;o com parceiros.</dd></div>
-                <div><dt>Projetos</dt><dd>Quatro temporadas do Lista Preta Podcast, Lista Preta TV, LISTAPRETA.DOC, Salvador Ra&iacute;zes Negras, entrevistas, coberturas e conte&uacute;dos originais.</dd></div>
-                <div><dt>Contexto</dt><dd>Plataforma de jornalismo, cultura, comportamento e audiovisual com protagonismo negro.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/lista.jpg" alt="M&iacute;dia relacionada"></div>
-              <div class="project-actions"><a class="button" href="projetos/lista-preta.html">Abrir p&aacute;gina</a><a class="button" href="https://listapreta.com/lista-preta-tv/" target="_blank" rel="noreferrer">Acessar Lista Preta TV</a><a class="button subtle" href="https://listapreta.com/podcasts/" target="_blank" rel="noreferrer">Ouvir podcasts</a><a class="button subtle" href="https://www.youtube.com/@listapreta" target="_blank" rel="noreferrer">Assistir no YouTube</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="catalise" class="project-card" data-primary="politicas" data-year="2022-2023" data-theme="politicas inovacao">
-          <a class="project-media clean-media" href="projetos/catalise.html">
-            <img src="assets/project-covers/catalise-square-cover.png" alt="Imagem institucional da Cat&aacute;lise">
-            <span>Cat&aacute;lise</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Cat&aacute;lise</p>
-            <h2>Projetos de inova&ccedil;&atilde;o e parcerias</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Atua&ccedil;&atilde;o em gest&atilde;o de projetos de inova&ccedil;&atilde;o, parcerias e avalia&ccedil;&atilde;o em educa&ccedil;&atilde;o, diversidade, tecnologia e impacto social. O trabalho envolveu planejamento, dados, relat&oacute;rios, articula&ccedil;&atilde;o institucional e apoio a iniciativas com organiza&ccedil;&otilde;es p&uacute;blicas, privadas e da sociedade civil.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Cat&aacute;lise, British Council, Instituto Unibanco, Minist&eacute;rio da Sa&uacute;de, Senado Federal</p>
-            <div class="project-tags" aria-label="Tags do projeto"><span>Políticas públicas</span><span>Dados</span><span>Estratégia</span><span>Impacto social</span></div>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Planejamento, monitoramento, avalia&ccedil;&atilde;o, an&aacute;lise de dados, propostas t&eacute;cnicas, relat&oacute;rios e articula&ccedil;&atilde;o institucional.</dd></div>
-                <div><dt>Temas</dt><dd>Educa&ccedil;&atilde;o, g&ecirc;nero, ra&ccedil;a, novas tecnologias, intelig&ecirc;ncia artificial, sa&uacute;de ind&iacute;gena e fortalecimento de capacidades institucionais.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/project-squares/catalise-square.png" alt="M&iacute;dia relacionada"></div>
-              <div class="project-actions"><a class="button" href="projetos/catalise.html">Abrir p&aacute;gina</a><a class="button" href="https://www.catalise.social/" target="_blank" rel="noreferrer">Acessar Cat&aacute;lise</a></div>
-            </details>
-          </div>
-        </article>
-
-        <article id="portal-clic" class="project-card" data-primary="politicas" data-year="2020-2022" data-theme="politicas inovacao">
-          <a class="project-media clean-media" href="projetos/portal-clic.html">
-            <img src="assets/project-covers/clic-metodologia-cover.png" alt="Portal CLIC,011.lab e Vetor Brasil">
-            <span>CLIC</span>
-          </a>
-          <div class="project-body">
-            <p class="project-place">Vetor Brasil / Motriz / Prefeitura de S&atilde;o Paulo</p>
-            <h2>Portal CLIC</h2>
-            <p class="project-objective"><strong>O que &eacute;?</strong> Projeto de lideran&ccedil;a e estrutura&ccedil;&atilde;o do Portal CLIC, plataforma de informa&ccedil;&otilde;es e apoio &agrave; gest&atilde;o de pessoas da Prefeitura de S&atilde;o Paulo. A atua&ccedil;&atilde;o ocorreu no contexto do trainee em gest&atilde;o p&uacute;blica e inova&ccedil;&atilde;o, com diagn&oacute;stico institucional, PMO, moderniza&ccedil;&atilde;o administrativa e articula&ccedil;&atilde;o entre equipes.</p>
-            <p class="project-partners"><strong>Parceiros:</strong> Vetor Brasil, Motriz, Secretaria Municipal de Gest&atilde;o de S&atilde;o Paulo</p>
-            <div class="project-tags" aria-label="Tags do projeto"><span>Políticas públicas</span><span>Gestão de projetos</span><span>Dados</span><span>Inovação</span></div>
-            <details class="project-details">
-              <summary>Detalhes</summary>
-              <dl>
-                <div><dt>Atua&ccedil;&atilde;o</dt><dd>Trainee em gest&atilde;o p&uacute;blica, gest&atilde;o de projetos e inova&ccedil;&atilde;o, com lideran&ccedil;a do projeto e estrutura&ccedil;&atilde;o do Portal CLIC.</dd></div>
-                <div><dt>Entregas</dt><dd>Diagn&oacute;stico institucional, planejamento estrat&eacute;gico, moderniza&ccedil;&atilde;o administrativa, apoio ao Programa de Resid&ecirc;ncia em Gest&atilde;o P&uacute;blica e articula&ccedil;&atilde;o intersetorial.</dd></div>
-                <div><dt>Temas</dt><dd>Pol&iacute;tica de cotas p&uacute;blicas, direitos humanos, cidadania, reestrutura&ccedil;&atilde;o de cargos e sal&aacute;rios e projetos transversais.</dd></div>
-              </dl>
-              <div class="project-proof"><img src="assets/projects/clic-metodologia.png" alt="Portal CLIC,011.lab e Vetor Brasil"></div>
-              <div class="project-actions"><a class="button" href="projetos/portal-clic.html">Abrir p&aacute;gina</a><a class="button" href="https://clic.prefeitura.sp.gov.br" target="_blank" rel="noreferrer">Acessar Portal CLIC</a><a class="button subtle" href="https://clic.prefeitura.sp.gov.br/storage/uploads/2025/05/30/Ficha-resumo_Caso-CLIC-CopiCola.pdf" target="_blank" rel="noreferrer">Metodologia</a><a class="button subtle" href="https://www.motriz.org/" target="_blank" rel="noreferrer">Motriz</a></div>
-            </details>
-          </div>
-        </article>
-
-      </section>
-      <section class="page-end" aria-label="Encerramento">
-        <div class="sustain-mark" aria-hidden="true"><span class="leaf left"></span><span class="leaf right"></span><span class="soil"></span><span class="sun"></span><span class="grid-unit"></span></div>
-        <div class="final-copy">
-          <p class="eyebrow">Pr&oacute;xima conversa</p>
-          <h2>Vamos estruturar um projeto, pesquisa ou produto?</h2>
-          <p>Trabalho com escuta, diagn&oacute;stico, planejamento e entrega para transformar ideias complexas em a&ccedil;&otilde;es execut&aacute;veis.</p>
-          <div class="final-actions"><a class="button" href="sobre.html">Ver trajet&oacute;ria</a><a class="button subtle" href="contato.html">Conversar</a></div>
-        </div>
-      </section>
-    </main>
-    <script src="site.js"></script>
-  </body>
+﻿<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Projetos | Ramón Raquelly</title>
+<meta content="Galeria de projetos de Ramón Raquelly em sustentabilidade, políticas públicas, cultura, audiovisual, comunicação e avaliação." name="description"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="index.html">Ramón Raquelly</a>
+<nav aria-label="Navegação principal" class="nav">
+<a href="index.html"><span aria-hidden="true" class="nav-icon icon-home"></span>Home</a>
+<a href="sobre.html"><span aria-hidden="true" class="nav-icon icon-profile"></span>Sobre</a>
+<a href="areas.html"><span aria-hidden="true" class="nav-icon icon-grid"></span>Áreas</a>
+<a class="active" href="projetos.html"><span aria-hidden="true" class="nav-icon icon-portfolio"></span>Projetos</a>
+<a class="nav-cta" href="contato.html"><span aria-hidden="true" class="nav-icon icon-mail"></span>Contato</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Alternar tema claro e escuro" aria-pressed="false" class="theme-toggle" type="button"><span aria-hidden="true" class="theme-dark-label">☾</span><span aria-hidden="true" class="theme-light-label">☀</span></button>
+<button aria-expanded="false" aria-label="Pesquisar no site" class="search-toggle" type="button"><span aria-hidden="true"></span></button>
+<div aria-label="Idioma" class="language-switch">
+<button aria-expanded="false" aria-haspopup="true" class="language-current" type="button"><span class="current-lang">PT</span></button>
+<div class="language-menu" role="menu">
+<button data-lang="pt" role="menuitem" type="button">PT</button>
+<button data-lang="en" role="menuitem" type="button">ENG</button>
+<button data-lang="es" role="menuitem" type="button">ES</button>
+</div>
+</div>
+</div>
+<div aria-label="Busca no site" class="site-search-panel" hidden="" role="search">
+<label><span>Pesquisar</span><input class="site-search-input" placeholder="Projetos, áreas, parceiros..." type="search"/></label>
+<div aria-live="polite" class="site-search-results"></div>
+</div>
+</header>
+<main>
+<section class="page-hero two-col project-hero">
+<div>
+<p class="eyebrow">Projetos selecionados</p>
+<h1>Galeria de projetos.</h1>
+</div>
+<p class="lead">Projetos em sustentabilidade, diversidade, políticas públicas, cultura, inovação, comunicação e avaliação, com links para registros, publicações e instituições.</p>
+</section>
+<section aria-label="Filtros por tema" class="filters">
+<button class="filter active" data-filter="todos">Todos</button>
+<button class="filter" data-filter="sustentabilidade">Sustentabilidade</button>
+<button class="filter" data-filter="politicas">Políticas públicas</button>
+<button class="filter" data-filter="inovacao">Inovação e educação</button>
+<button class="filter" data-filter="cultura">Cultura</button>
+<button class="filter" data-filter="audiovisual">Audiovisual e comunicação</button>
+</section>
+<section aria-label="Mapa de projetos" class="project-map">
+<a data-map-filter="sustentabilidade" href="#oeco"><span><svg aria-hidden="true" class="cat-icon" viewbox="0 0 24 24"><path d="M5 19c7.5-.4 12.3-5.2 14-14-8.8 1.7-13.6 6.5-14 14Z"></path><path d="M5 19c2.6-4.1 5.8-7.1 10-9"></path></svg>Sustentabilidade</span><strong>OEI · TRAJECTS · INSPIRE · CIPSEM</strong></a>
+<a data-map-filter="politicas" href="#unesco-mec"><span><svg aria-hidden="true" class="cat-icon" viewbox="0 0 24 24"><path d="M4 20h16"></path><path d="M6 10h12"></path><path d="M8 10v10"></path><path d="M12 10v10"></path><path d="M16 10v10"></path><path d="M3 8l9-5 9 5Z"></path></svg>Políticas públicas</span><strong>PNEERQ · UNESCO/MEC · CLIC · Catálise</strong></a>
+<a data-map-filter="inovacao" href="#ceibal"><span><svg aria-hidden="true" class="cat-icon" viewbox="0 0 24 24"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M8.4 14.8a6 6 0 1 1 7.2 0c-.7.6-1.1 1.4-1.1 2.2h-5c0-.8-.4-1.6-1.1-2.2Z"></path><path d="M12 4v2"></path></svg>Inovação e educação</span><strong>Ceibal · LABIC-UY · Escola que Protege</strong></a>
+<a data-map-filter="audiovisual" href="#gata-audiovisual"><span><svg aria-hidden="true" class="cat-icon" viewbox="0 0 24 24"><path d="M4 15V9l9-3v12Z"></path><path d="M13 9h2a4 4 0 0 1 0 8h-2"></path><path d="M6 15l2 5h3l-2-5"></path></svg>Audiovisual e comunicação</span><strong>MinC · Gata Audiovisual · DiaTV · Urach · Lista Preta</strong></a>
+</section>
+<section class="project-gallery project-timeline">
+<article class="project-card" data-primary="cultura" data-theme="cultura politicas" data-year="2026" id="ibermuseos">
+<a class="project-media clean-media" href="projetos/ibermuseos.html">
+<img alt="Logo oficial Ibermuseus" src="assets/project-covers/ibermuseos-red-cover.png"/>
+<span>Ibermuseus</span>
+</a>
+<div class="project-body"><p class="project-place">Ibermuseus</p><h2>12º Encontro Ibero-Americano de Museus</h2><p class="project-objective project-summary">Oficina selecionada para o 12º Encontro Ibero-Americano de Museus, articulando diversidade, mediação cultural e apropriação social do patrimônio.</p><div class="project-actions"><a class="button" href="projetos/ibermuseos.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="sustentabilidade" data-theme="sustentabilidade audiovisual" data-year="2026" id="oeco">
+<a class="project-media" href="projetos/oeco.html">
+<img alt="Imagem do especial O Oásis da Leste" src="assets/project-covers/oeco-square-cover.png"/>
+<span>((o))eco</span>
+</a>
+<div class="project-body"><p class="project-place">((o))eco</p><h2>O Oásis da Leste</h2><p class="project-objective project-summary">Série jornalística sobre o Córrego Tiquatira e o parque linear que atravessa a Zona Leste de São Paulo.</p><div class="project-actions"><a class="button" href="projetos/oeco.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="cultura" data-theme="cultura audiovisual" data-year="2024-2026" id="minc-avaliacao-cultural">
+<a class="project-media clean-media" href="projetos/minc-avaliacao-cultural.html">
+<img alt="Marca do Ministério da Cultura" src="assets/project-covers/minc-avaliacao-cultural-cover.png"/>
+<span>Ministério da Cultura</span>
+</a>
+<div class="project-body"><p class="project-place">Ministério da Cultura / PRONAC</p><h2>Avaliação técnica de projetos culturais</h2><p class="project-objective project-summary">Avaliação técnica e emissão de pareceres para projetos culturais, com comprovações no MinC/PRONAC e experiências em cinema, audiovisual e território.</p><div class="project-actions"><a class="button" href="projetos/minc-avaliacao-cultural.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="audiovisual" data-theme="audiovisual comunicacao" data-year="2025" id="gata-audiovisual">
+<a class="project-media clean-media" href="projetos/gata-audiovisual.html">
+<img alt="Logo Gata Audiovisual" src="assets/project-covers/gata-audiovisual-logo-square-cover.png"/>
+<span>Gata Audiovisual</span>
+</a>
+<div class="project-body"><p class="project-place">Gata Audiovisual</p><h2>Encontro com a Blogueirinha</h2><p class="project-objective project-summary">Produção e participação em produto audiovisual de entretenimento digital vinculado ao Encontro com a Blogueirinha.</p><div class="project-actions"><a class="button" href="projetos/gata-audiovisual.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="audiovisual" data-theme="audiovisual comunicacao" data-year="2026" id="diatv">
+<a class="project-media clean-media" href="projetos/diatv.html">
+<img alt="Logo DiaTV" src="assets/project-covers/diatv-logo-square-cover.png"/>
+<span>DiaTV</span>
+</a>
+<div class="project-body"><p class="project-place">DiaTV</p><h2>Você na DiaTV 2</h2><p class="project-objective project-summary">Participação como um dos apresentadores selecionados para o Você na DiaTV 2, produto audiovisual de entretenimento e seleção de talentos.</p><div class="project-actions"><a class="button" href="projetos/diatv.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="audiovisual" data-theme="audiovisual comunicacao" data-year="2025" id="urach">
+<a class="project-media clean-media" href="projetos/urach.html">
+<img alt="Logo Baú Explica" src="assets/project-covers/bau-logo-black-square-cover.png"/>
+<span>Baú Explica + Griô Podcasts</span>
+</a>
+<div class="project-body"><p class="project-place">Baú Explica + Griô Podcasts</p><h2>Urach: Fama, Fé e Fúria</h2><p class="project-objective project-summary">Podcast narrativo sobre fama, mídia e cultura digital, com direção, apresentação, roteiro e trilha sonora autoral.</p><div class="project-actions"><a class="button" href="projetos/urach.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="politicas" data-theme="politicas inovacao" data-year="2023-2026" id="unesco-mec">
+<a class="project-media clean-media" href="projetos/unesco-mec.html">
+<img alt="Logo oficial UNESCO" src="assets/project-covers/unesco-circle-square-cover.png"/>
+<span>UNESCO / MEC</span>
+</a>
+<div class="project-body"><p class="project-place">UNESCO Brasil / Ministério da Educação</p><h2>Vários projetos</h2><p class="project-objective project-summary">Cooperação técnica em educação, equidade, diversidade e relações étnico-raciais junto à UNESCO Brasil e ao Ministério da Educação.</p><div class="project-actions"><a class="button" href="projetos/unesco-mec.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="sustentabilidade" data-theme="sustentabilidade politicas" data-year="2025" id="oei">
+<a class="project-media clean-media" href="projetos/oei.html">
+<img alt="Capa do Plano Brasil Nordeste de Transformação Ecológica" src="assets/project-covers/oei-pte-cover-full.png"/>
+<span>OEI</span>
+</a>
+<div class="project-body"><p class="project-place">OEI / Open Society Foundations / Consórcio Nordeste</p><h2>Plano Brasil Nordeste de Transformação Ecológica</h2><p class="project-objective project-summary">Plano regional para territorializar a agenda de transformação ecológica nos nove estados do Nordeste.</p><div class="project-actions"><a class="button" href="projetos/oei.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="inovacao" data-theme="inovacao cultura" data-year="2025" id="embaixada-preta">
+<a class="project-media clean-media" href="projetos/embaixada-preta.html">
+<img alt="Logo Embaixada Preta" src="assets/project-squares/embaixada-preta-logo-square.png"/>
+<span>Embaixada Preta</span>
+</a>
+<div class="project-body"><p class="project-place">Embaixada Preta São Paulo / Feira Preta</p><h2>Workshop Projetos Criativos e Soluções Tecnológicas</h2><p class="project-objective project-summary">Workshop de projetos criativos e soluções tecnológicas para artistas, criadores e empreendedores culturais.</p><div class="project-actions"><a class="button" href="projetos/embaixada-preta.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="sustentabilidade" data-theme="sustentabilidade comunicacao" data-year="2025" id="trajects">
+<a class="project-media" href="projetos/trajects.html">
+<img alt="Logo oficial TRAJECTS" src="assets/project-covers/trajects-square-cover.png"/>
+<span>TRAJECTS</span>
+</a>
+<div class="project-body"><p class="project-place">TRAJECTS / Technische Universität Berlin / DAAD Global Centres</p><h2>Global Academy 2025 (Cape Town, South Africa)</h2><p class="project-objective project-summary">Participação na Global Academy 2025, em Cape Town, no âmbito da rede TRAJECTS, TU Berlin e DAAD Global Centres.</p><div class="project-actions"><a class="button" href="projetos/trajects.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="sustentabilidade" data-theme="sustentabilidade politicas" data-year="2025" id="inspire">
+<a class="project-media clean-media" href="projetos/inspire.html">
+<img alt="Logo oficial INSPIRE" src="assets/project-covers/inspire-hd-cover.png"/>
+<span>INSPIRE</span>
+</a>
+<div class="project-body"><p class="project-place">INSPIRE / University of Cape Town</p><h2>Junior Research Fellow / Pesquisador em Transição Energética Justa</h2><p class="project-objective project-summary">Pesquisa sobre desempenho social e governança comunitária em energia renovável na University of Cape Town.</p><div class="project-actions"><a class="button" href="projetos/inspire.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="sustentabilidade" data-theme="sustentabilidade politicas" data-year="2025" id="cipsem">
+<a class="project-media clean-media" href="projetos/cipsem.html">
+<img alt="Logo oficial CIPSEM e TU Dresden" src="assets/project-covers/cipsem-tu-dresden-cover.png"/>
+<span>CIPSEM</span>
+</a>
+<div class="project-body"><p class="project-place">CIPSEM / Technische Universität Dresden</p><h2>Curso internacional UNEP/UNESCO/BMUV</h2><p class="project-objective project-summary">Diploma internacional da TU Dresden em mobilidade sustentável, governança climática e transformação urbana.</p><div class="project-actions"><a class="button" href="projetos/cipsem.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="inovacao" data-theme="inovacao politicas" data-year="2025" id="ceibal">
+<a class="project-media clean-media" href="projetos/ceibal.html">
+<img alt="Logo oficial Ceibal" src="assets/project-covers/ceibal-logo-cover.png"/>
+<span>Ceibal</span>
+</a>
+<div class="project-body"><p class="project-place">Ceibal</p><h2>Oficina de diversidade e inclusão com tecnologia</h2><p class="project-objective project-summary">Oficina sobre diversidade, inclusão, tecnologia e espaços educativos no ecossistema Ceibal.</p><div class="project-actions"><a class="button" href="projetos/ceibal.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="inovacao" data-theme="inovacao politicas" data-year="2024" id="labic">
+<a class="project-media" href="projetos/labic.html">
+<img alt="Identidade oficial LABIC-UY" src="assets/project-covers/labic-official-square-cover.png"/>
+<span>LABIC-UY</span>
+</a>
+<div class="project-body"><p class="project-place">LABIC-UY / SEGIB / Ceibal</p><h2>Laboratório de Inovação Cidadã do Uruguai</h2><p class="project-objective project-summary">Laboratório ibero-americano de inovação cidadã com foco em comunicação, diversidade e inclusão.</p><div class="project-actions"><a class="button" href="projetos/labic.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="cultura" data-theme="cultura comunicacao" data-year="2024" id="gsah">
+<a class="project-media" href="projetos/gsah.html">
+<img alt="Imagem oficial Global South Arts &amp; Health" src="assets/project-covers/gsah-official-square-cover.png"/>
+<span>GSAH</span>
+</a>
+<div class="project-body"><p class="project-place">Global South Arts &amp; Health</p><h2>Representante Brasileiro 2024</h2><p class="project-objective project-summary">Representação brasileira em rede internacional de artes e saúde voltada a práticas criativas no Sul Global.</p><div class="project-actions"><a class="button" href="projetos/gsah.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="audiovisual" data-theme="audiovisual comunicacao" data-year="2022-2025" id="lista-preta">
+<a class="project-media clean-media" href="projetos/lista-preta.html">
+<img alt="Logo Lista Preta" src="assets/logos/lista-preta.svg"/>
+<span>Lista Preta</span>
+</a>
+<div class="project-body"><p class="project-place">Lista Preta</p><h2>Produção executiva e projetos audiovisuais</h2><p class="project-objective project-summary">Produção executiva e planejamento de projetos audiovisuais e conteúdos digitais de cultura negra.</p><div class="project-actions"><a class="button" href="projetos/lista-preta.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="politicas" data-theme="politicas inovacao" data-year="2022-2023" id="catalise">
+<a class="project-media clean-media" href="projetos/catalise.html">
+<img alt="Imagem institucional da Catálise" src="assets/project-covers/catalise-square-cover.png"/>
+<span>Catálise</span>
+</a>
+<div class="project-body"><p class="project-place">Catálise</p><h2>Projetos de inovação e parcerias</h2><p class="project-objective project-summary">Gestão de projetos e articulação institucional em inovação social, impacto público e desenvolvimento territorial.</p><div class="project-actions"><a class="button" href="projetos/catalise.html">Abrir página</a></div></div>
+</article>
+<article class="project-card" data-primary="politicas" data-theme="politicas inovacao" data-year="2020-2022" id="portal-clic">
+<a class="project-media clean-media" href="projetos/portal-clic.html">
+<img alt="Portal CLIC,011.lab e Vetor Brasil" src="assets/project-covers/clic-metodologia-cover.png"/>
+<span>CLIC</span>
+</a>
+<div class="project-body"><p class="project-place">Vetor Brasil / Motriz / Prefeitura de São Paulo</p><h2>Portal CLIC</h2><p class="project-objective project-summary">Liderança na estruturação do Portal CLIC, plataforma de informação e apoio à gestão de pessoas da Prefeitura de São Paulo.</p><div class="project-actions"><a class="button" href="projetos/portal-clic.html">Abrir página</a></div></div>
+</article>
+</section>
+<section aria-label="Encerramento" class="page-end">
+<div aria-hidden="true" class="sustain-mark"><span class="leaf left"></span><span class="leaf right"></span><span class="soil"></span><span class="sun"></span><span class="grid-unit"></span></div>
+<div class="final-copy">
+<p class="eyebrow">Próxima conversa</p>
+<h2>Vamos estruturar um projeto, pesquisa ou produto?</h2>
+<p>Trabalho com escuta, diagnóstico, planejamento e entrega para transformar ideias complexas em ações executáveis.</p>
+<div class="final-actions"><a class="button" href="sobre.html">Ver trajetória</a><a class="button subtle" href="contato.html">Conversar</a></div>
+</div>
+</section>
+</main>
+<script src="site.js"></script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

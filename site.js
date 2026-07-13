@@ -42,7 +42,8 @@ const searchItems = [
   ["Gata Audiovisual", "projetos/gata-audiovisual.html", "blogueirinha audiovisual entrevista"],
   ["Urach", "projetos/urach.html", "podcast baú griô"],
   ["Ibermuseus", "projetos/ibermuseos.html", "museus patrimônio cultura"],
-  ["Embaixada Preta", "projetos/embaixada-preta.html", "workshop projetos criativos tecnologia"]
+  ["Embaixada Preta", "projetos/embaixada-preta.html", "workshop projetos criativos tecnologia"],
+  ["Ministério da Cultura", "projetos/minc-avaliacao-cultural.html", "avaliador tecnico parecerista pronac minc cultura cinema audiovisual"]
 ];
 
 const setTheme = (theme) => {
@@ -161,62 +162,31 @@ timelineTabs.forEach((tab) => {
 
 const langButtons = document.querySelectorAll("[data-lang]");
 
-const setTranslateCookie = (lang) => {
-  const value = lang === "pt" ? "" : `/pt/${lang}`;
-  document.cookie = `googtrans=${value}; path=/`;
-  document.cookie = `googtrans=${value}; domain=${location.hostname}; path=/`;
+const getLanguageFromPath = () => {
+  const firstSegment = location.pathname.split("/").filter(Boolean)[0];
+  return firstSegment === "en" || firstSegment === "es" ? firstSegment : "pt";
 };
 
-const loadGoogleTranslate = () => {
-  if (document.getElementById("google_translate_element")) return;
-  const holder = document.createElement("div");
-  holder.id = "google_translate_element";
-  holder.hidden = true;
-  document.body.appendChild(holder);
-  window.googleTranslateElementInit = () => {
-    new window.google.translate.TranslateElement({
-      pageLanguage: "pt",
-      includedLanguages: "en,es,pt",
-      autoDisplay: false
-    }, "google_translate_element");
-  };
-  const script = document.createElement("script");
-  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  document.head.appendChild(script);
+const getLocalizedPath = (lang) => {
+  const parts = location.pathname.split("/").filter(Boolean);
+  if (parts[0] === "en" || parts[0] === "es") parts.shift();
+  const basePath = parts.length ? `/${parts.join("/")}` : "/index.html";
+  if (lang === "pt") return basePath;
+  return `/${lang}${basePath}`;
 };
 
 langButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const lang = button.dataset.lang;
-    langButtons.forEach((item) => item.classList.toggle("active", item === button));
-    if (currentLang) currentLang.textContent = lang === "en" ? "ENG" : lang.toUpperCase();
     languageSwitch?.classList.remove("open");
     languageCurrent?.setAttribute("aria-expanded", "false");
-    localStorage.setItem("ramon-site-lang", lang);
-    document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
-    setTranslateCookie(lang);
-    if (lang === "pt") {
-      location.reload();
-      return;
-    }
-    loadGoogleTranslate();
-    setTimeout(() => {
-      const combo = document.querySelector(".goog-te-combo");
-      if (combo) {
-        combo.value = lang;
-        combo.dispatchEvent(new Event("change"));
-      }
-    }, 900);
+    window.location.href = `${getLocalizedPath(lang)}${location.search}${location.hash}`;
   });
 });
 
-const selectedLang = localStorage.getItem("ramon-site-lang") || "pt";
+const selectedLang = getLanguageFromPath();
 document.querySelector(`[data-lang="${selectedLang}"]`)?.classList.add("active");
 if (currentLang) currentLang.textContent = selectedLang === "en" ? "ENG" : selectedLang.toUpperCase();
-if (selectedLang !== "pt") {
-  setTranslateCookie(selectedLang);
-  loadGoogleTranslate();
-}
 
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
