@@ -73,34 +73,50 @@ methodNodes.forEach((node) => {
   });
 });
 
+const getSearchElements = () => ({
+  toggle: document.querySelector(".search-toggle"),
+  panel: document.querySelector(".site-search-panel"),
+  input: document.querySelector(".site-search-input"),
+  results: document.querySelector(".site-search-results")
+});
+
 const renderSearch = (query = "") => {
-  if (!searchResults) return;
+  const { results } = getSearchElements();
+  if (!results) return;
   const normalized = query.trim().toLowerCase();
-  const results = searchItems
+  const matches = searchItems
     .filter(([title, , terms]) => !normalized || `${title} ${terms}`.toLowerCase().includes(normalized))
     .slice(0, 6);
-  searchResults.innerHTML = results.length
-    ? results.map(([title, href]) => `<a href="${href}">${title}</a>`).join("")
+  results.innerHTML = matches.length
+    ? matches.map(([title, href]) => `<a href="${href}">${title}</a>`).join("")
     : "<p>Nenhum resultado direto.</p>";
 };
 
-searchToggle?.addEventListener("click", () => {
-  const isOpen = !searchPanel?.hidden;
-  if (!searchPanel) return;
-  searchPanel.hidden = isOpen;
-  searchToggle.setAttribute("aria-expanded", String(!isOpen));
-  if (!isOpen) {
-    renderSearch(searchInput?.value || "");
-    window.setTimeout(() => searchInput?.focus(), 20);
+document.addEventListener("click", (event) => {
+  const clickedSearch = event.target.closest?.(".search-toggle");
+  if (!clickedSearch) return;
+  const { panel, input } = getSearchElements();
+  if (!panel) return;
+  const willOpen = panel.hidden;
+  panel.hidden = !willOpen;
+  clickedSearch.setAttribute("aria-expanded", String(willOpen));
+  languageSwitch?.classList.remove("open");
+  languageCurrent?.setAttribute("aria-expanded", "false");
+  if (willOpen) {
+    renderSearch(input?.value || "");
+    window.setTimeout(() => input?.focus(), 40);
   }
 });
 
-searchInput?.addEventListener("input", () => renderSearch(searchInput.value));
+document.addEventListener("input", (event) => {
+  if (event.target.matches?.(".site-search-input")) renderSearch(event.target.value);
+});
 
 document.addEventListener("click", (event) => {
-  if (searchPanel && !searchPanel.hidden && !searchPanel.contains(event.target) && !searchToggle?.contains(event.target)) {
-    searchPanel.hidden = true;
-    searchToggle?.setAttribute("aria-expanded", "false");
+  const { toggle, panel } = getSearchElements();
+  if (panel && !panel.hidden && !panel.contains(event.target) && !toggle?.contains(event.target)) {
+    panel.hidden = true;
+    toggle?.setAttribute("aria-expanded", "false");
   }
   if (languageSwitch && !languageSwitch.contains(event.target)) {
     languageSwitch.classList.remove("open");
@@ -113,28 +129,48 @@ languageCurrent?.addEventListener("click", () => {
   languageCurrent.setAttribute("aria-expanded", String(Boolean(isOpen)));
 });
 
-const setFilter = (filter) => {
-  filterButtons.forEach((button) => button.classList.toggle("active", button.dataset.filter === filter));
-  projectMapLinks.forEach((link) => link.classList.toggle("active", link.dataset.mapFilter === filter));
+const normalizeFilter = (value = "todos") => value.trim().toLowerCase();
+
+const cardMatchesFilter = (card, filter) => {
+  if (filter === "todos") return true;
+  const themes = (card.dataset.theme || "").split(/\s+/).map(normalizeFilter);
+  const primary = normalizeFilter(card.dataset.primary || "");
+  return primary === filter || themes.includes(filter);
+};
+
+const setFilter = (rawFilter = "todos") => {
+  const filter = normalizeFilter(rawFilter);
+  filterButtons.forEach((button) => {
+    const isActive = normalizeFilter(button.dataset.filter || "") === filter;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+  projectMapLinks.forEach((link) => {
+    link.classList.toggle("active", normalizeFilter(link.dataset.mapFilter || "") === filter);
+  });
   projectCards.forEach((card) => {
-    const themes = card.dataset.theme || "";
-    const primary = card.dataset.primary || "";
-    card.hidden = filter !== "todos" && !themes.includes(filter) && primary !== filter;
+    const show = cardMatchesFilter(card, filter);
+    card.classList.toggle("is-filtered-out", !show);
+    card.hidden = false;
+    card.setAttribute("aria-hidden", String(!show));
   });
 };
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => setFilter(button.dataset.filter));
+document.addEventListener("click", (event) => {
+  const button = event.target.closest?.(".filter[data-filter]");
+  if (!button) return;
+  event.preventDefault();
+  setFilter(button.dataset.filter);
 });
 
-projectMapLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    const filter = link.dataset.mapFilter;
-    setFilter(filter);
-    const target = Array.from(projectCards).find((card) => !card.hidden);
-    window.setTimeout(() => target?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
-  });
+document.addEventListener("click", (event) => {
+  const link = event.target.closest?.("[data-map-filter]");
+  if (!link) return;
+  event.preventDefault();
+  const filter = link.dataset.mapFilter;
+  setFilter(filter);
+  const target = Array.from(projectCards).find((card) => !card.classList.contains("is-filtered-out"));
+  window.setTimeout(() => target?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
 });
 
 areaProjectButtons.forEach((button) => {
