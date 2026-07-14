@@ -1,10 +1,10 @@
 ﻿:root {
-  --bg: #f7f3ec;
-  --panel: #fffdf9;
+  --bg: #e8dcc9;
+  --panel: #fff6e8;
   --ink: #171717;
-  --muted: #66645f;
-  --soft: #66645f;
-  --line: #d9d2c4;
+  --muted: #5f594f;
+  --soft: #5f594f;
+  --line: #cbb9a4;
   --green: #2f6f5e;
   --blue: #2f6f5e;
   --red: #7b3f3f;
@@ -69,11 +69,14 @@ body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url("assets/bg-lines-light.svg");
-  background-size: 1320px 742px;
-  background-position: center top;
+  background-image:
+    url("assets/bg-lines-light.svg"),
+    url("assets/bg-lines-light.svg");
+  background-size: 820px 461px, 1180px 664px;
+  background-position: center top, 240px 120px;
   background-repeat: repeat;
-  opacity: 0.9;
+  opacity: 1;
+  filter: contrast(1.55) saturate(0.7);
 }
 
 html[data-theme="dark"] body::before {
@@ -3443,7 +3446,7 @@ html[data-theme="dark"] .home-statement {
   .brand.signature {
     display: block !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 28ch !important;
     overflow-wrap: anywhere !important;
     white-space: normal !important;
     font-size: clamp(2rem, 10vw, 2.65rem) !important;
@@ -3455,7 +3458,7 @@ html[data-theme="dark"] .home-statement {
     display: flex !important;
     flex-wrap: wrap !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 40ch !important;
     gap: 10px 18px !important;
     padding: 0 !important;
     overflow: visible !important;
@@ -3475,7 +3478,7 @@ html[data-theme="dark"] .home-statement {
     flex-wrap: nowrap !important;
     order: initial !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 42ch !important;
     gap: 8px !important;
     margin: 2px 0 0 !important;
     padding: 0 !important;
@@ -3539,7 +3542,7 @@ html[data-theme="dark"] .home-statement {
 
   .home-statement {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: min(100%, 286px) !important;
     padding: 28px 18px !important;
   }
 
@@ -3901,38 +3904,40 @@ html[data-theme="dark"] .home-statement {
 
 /* Project gallery v2: editorial cards, two per row on desktop, compact on mobile. */
 .project-gallery {
+  width: min(100%, 1120px) !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  align-items: start !important;
-  gap: clamp(18px, 2vw, 28px) !important;
-  padding-top: clamp(30px, 3.4vw, 52px) !important;
+  align-items: stretch !important;
+  gap: clamp(14px, 1.45vw, 20px) !important;
+  padding-top: clamp(22px, 2.3vw, 34px) !important;
 }
 
 .project-card,
 .project-card.featured {
   display: flex !important;
+  height: 100% !important;
   min-height: 0 !important;
   flex-direction: column !important;
-  border: 1px solid color-mix(in srgb, var(--cat-ink) 34%, var(--line)) !important;
-  border-radius: 18px !important;
+  border: 1px solid color-mix(in srgb, var(--cat-ink) 30%, var(--line)) !important;
+  border-radius: 14px !important;
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--cat-soft) 70%, var(--panel)), color-mix(in srgb, var(--panel) 92%, var(--cat-soft))) !important;
-  box-shadow: 0 18px 44px rgba(23, 23, 21, 0.055) !important;
+  box-shadow: 0 10px 26px rgba(23, 23, 21, 0.045) !important;
   overflow: hidden !important;
 }
 
 .project-card::before {
   position: absolute !important;
-  top: 14px !important;
-  left: 14px !important;
+  top: 10px !important;
+  left: 10px !important;
   z-index: 3 !important;
   display: inline-flex !important;
   width: auto !important;
-  padding: 6px 10px !important;
+  padding: 5px 8px !important;
   border: 1px solid color-mix(in srgb, var(--cat-ink) 38%, transparent) !important;
   border-radius: 999px !important;
   background: color-mix(in srgb, var(--panel) 88%, var(--cat-soft)) !important;
   color: var(--cat-ink) !important;
-  font-size: 0.66rem !important;
+  font-size: 0.56rem !important;
   line-height: 1 !important;
   letter-spacing: 0.08em !important;
 }
@@ -3941,7 +3946,7 @@ html[data-theme="dark"] .home-statement {
   width: 100% !important;
   height: auto !important;
   min-height: 0 !important;
-  aspect-ratio: 16 / 10 !important;
+  aspect-ratio: 16 / 9 !important;
   border-right: 0 !important;
   border-bottom: 1px solid color-mix(in srgb, var(--cat-ink) 22%, var(--line)) !important;
   border-radius: 0 !important;
@@ -3952,7 +3957,7 @@ html[data-theme="dark"] .home-statement {
   width: 100% !important;
   height: 100% !important;
   min-height: 0 !important;
-  aspect-ratio: 16 / 10 !important;
+  aspect-ratio: 16 / 9 !important;
   object-fit: cover !important;
 }
 
@@ -3966,34 +3971,34 @@ html[data-theme="dark"] .home-statement {
   flex: 1 1 auto !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
-  padding: clamp(20px, 2.1vw, 32px) !important;
+  padding: clamp(14px, 1.45vw, 22px) !important;
 }
 
 .project-place {
-  margin-bottom: 9px !important;
-  font-size: clamp(0.66rem, 0.74vw, 0.78rem) !important;
+  margin-bottom: 6px !important;
+  font-size: clamp(0.68rem, 0.72vw, 0.78rem) !important;
   letter-spacing: 0.1em !important;
 }
 
 .project-body h2,
 .project-card.featured .project-body h2 {
   margin: 0 0 12px !important;
-  font-size: clamp(1.38rem, 1.65vw, 2.05rem) !important;
-  line-height: 1.02 !important;
+  font-size: clamp(0.98rem, 1.08vw, 1.2rem) !important;
+  line-height: 1.12 !important;
   letter-spacing: 0 !important;
 }
 
 .project-objective {
   color: var(--muted) !important;
-  font-size: clamp(0.94rem, 0.98vw, 1.04rem) !important;
-  line-height: 1.48 !important;
+  font-size: clamp(0.78rem, 0.84vw, 0.9rem) !important;
+  line-height: 1.38 !important;
 }
 
 .project-partners {
-  margin: 14px 0 0 !important;
+  margin: 10px 0 0 !important;
   color: color-mix(in srgb, var(--muted) 88%, var(--ink)) !important;
-  font-size: clamp(0.82rem, 0.88vw, 0.94rem) !important;
-  line-height: 1.4 !important;
+  font-size: clamp(0.72rem, 0.78vw, 0.84rem) !important;
+  line-height: 1.32 !important;
 }
 
 .project-partners strong {
@@ -4002,17 +4007,17 @@ html[data-theme="dark"] .home-statement {
 
 .project-actions {
   margin-top: auto !important;
-  padding-top: 22px !important;
-  gap: 9px !important;
+  padding-top: 16px !important;
+  gap: 7px !important;
 }
 
 .project-card .button,
 .project-actions .button {
-  min-height: 40px !important;
+  min-height: 34px !important;
   margin-top: 0 !important;
-  padding: 10px 15px !important;
+  padding: 8px 12px !important;
   border-radius: 999px !important;
-  font-size: 0.82rem !important;
+  font-size: 0.72rem !important;
   line-height: 1 !important;
 }
 
@@ -4024,26 +4029,36 @@ html[data-theme="dark"] .project-card,
 html[data-theme="dark"] .project-card.featured {
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--cat-ink) 12%, var(--panel)), color-mix(in srgb, var(--panel) 94%, var(--cat-soft))) !important;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24) !important;
 }
 
 @media (max-width: 1180px) {
   .project-gallery {
+    width: min(100%, 820px) !important;
     grid-template-columns: 1fr !important;
   }
 }
 
 @media (max-width: 760px) {
   .project-gallery {
-    gap: 16px !important;
-    padding: 22px 12px 58px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    gap: 12px !important;
+    padding: 18px 10px 52px !important;
+    overflow-x: hidden !important;
   }
 
   .project-card,
   .project-card.featured {
     display: flex !important;
+    width: 100% !important;
+    max-width: calc(100vw - 20px) !important;
+    min-width: 0 !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
     flex-direction: column !important;
-    border-radius: 15px !important;
+    border-radius: 13px !important;
+    overflow: hidden !important;
   }
 
   .project-card::before {
@@ -4057,7 +4072,7 @@ html[data-theme="dark"] .project-card.featured {
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
-    aspect-ratio: 16 / 9 !important;
+    aspect-ratio: 16 / 8.6 !important;
     border-right: 0 !important;
     border-bottom: 1px solid var(--cat-line) !important;
   }
@@ -4065,7 +4080,7 @@ html[data-theme="dark"] .project-card.featured {
   .project-media img,
   .project-card.featured .project-media img {
     min-height: 0 !important;
-    aspect-ratio: 16 / 9 !important;
+    aspect-ratio: 16 / 8.6 !important;
   }
 
   .project-media span {
@@ -4077,8 +4092,10 @@ html[data-theme="dark"] .project-card.featured {
 
   .project-body {
     width: 100% !important;
+    max-width: 100% !important;
     min-width: 0 !important;
-    padding: 13px 13px 14px !important;
+    padding: 12px !important;
+    overflow: hidden !important;
   }
 
   .project-place {
@@ -4089,42 +4106,172 @@ html[data-theme="dark"] .project-card.featured {
 
   .project-body h2,
   .project-card.featured .project-body h2 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 28ch !important;
+    min-width: 0 !important;
     margin-bottom: 7px !important;
-    font-size: clamp(1.08rem, 5vw, 1.36rem) !important;
+    font-size: clamp(0.96rem, 4.4vw, 1.16rem) !important;
     line-height: 1.08 !important;
-    overflow-wrap: anywhere !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    white-space: normal !important;
   }
 
   .project-objective {
     display: -webkit-box !important;
     overflow: hidden !important;
+    width: 100% !important;
+    max-width: 40ch !important;
+    min-width: 0 !important;
     -webkit-box-orient: vertical !important;
     -webkit-line-clamp: 4 !important;
-    font-size: 0.78rem !important;
+    font-size: 0.76rem !important;
     line-height: 1.32 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    white-space: normal !important;
   }
 
   .project-partners {
     display: -webkit-box !important;
     overflow: hidden !important;
+    width: 100% !important;
+    max-width: 42ch !important;
+    min-width: 0 !important;
     margin-top: 8px !important;
     -webkit-box-orient: vertical !important;
     -webkit-line-clamp: 2 !important;
-    font-size: 0.7rem !important;
+    font-size: 0.68rem !important;
     line-height: 1.24 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    white-space: normal !important;
   }
 
   .project-actions {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
     margin-top: 10px !important;
     padding-top: 0 !important;
     gap: 6px !important;
+    overflow: hidden !important;
   }
 
   .project-card .button,
   .project-actions .button {
+    max-width: 100% !important;
     min-height: 32px !important;
     padding: 7px 10px !important;
     font-size: 0.7rem !important;
+    white-space: normal !important;
+  }
+
+  .page-hero,
+  .project-hero {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    display: block !important;
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+    overflow: hidden !important;
+  }
+
+  .page-hero > .lead,
+  .project-hero > .lead {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-right: 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    white-space: normal !important;
+  }
+
+  .project-hero h1,
+  .page-hero h1 {
+    width: 100% !important;
+    max-width: 9.5ch !important;
+    min-width: 0 !important;
+    font-size: clamp(2rem, 10vw, 2.55rem) !important;
+    line-height: 0.98 !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .topbar .header-actions {
+    position: static !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+    order: 3 !important;
+    pointer-events: auto !important;
+    overflow: visible !important;
+  }
+
+  .language-switch {
+    position: static !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+
+  .language-switch button,
+  .theme-toggle,
+  .search-toggle {
+    min-width: 38px !important;
+    min-height: 38px !important;
+    width: 38px !important;
+    height: 38px !important;
+    padding: 0 !important;
+    pointer-events: auto !important;
+  }
+
+  .language-current {
+    min-width: 42px !important;
+    width: auto !important;
+    padding: 0 10px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .language-menu {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    z-index: 1 !important;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    padding: 8px !important;
+    border-radius: 999px !important;
+    transform: none !important;
+    background: color-mix(in srgb, var(--panel) 96%, var(--bg)) !important;
+    box-shadow: none !important;
+  }
+
+  .language-switch.open .language-menu {
+    display: grid !important;
+    gap: 6px !important;
+  }
+
+  .language-menu a {
+    min-height: 34px !important;
+    justify-content: center !important;
+    padding: 7px 8px !important;
+    border-radius: 999px !important;
+    font-size: 0.82rem !important;
+    text-align: center !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -4142,6 +4289,16 @@ html[data-theme="dark"] .project-card.featured {
   .project-media img,
   .project-card.featured .project-media img {
     min-height: 0 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .project-hero > .lead,
+  .page-hero > .lead {
+    width: min(286px, calc(100vw - 72px)) !important;
+    max-width: min(286px, calc(100vw - 72px)) !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
   }
 }
 
