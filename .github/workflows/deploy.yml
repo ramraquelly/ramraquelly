@@ -25,14 +25,7 @@ jobs:
             --data-binary @site.zip \
             "https://api.netlify.com/api/v1/sites/${NETLIFY_SITE_ID}/deploys" \
             > deploy-response.json
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          data = json.loads(Path("deploy-response.json").read_text())
-          print("Netlify deploy:", data.get("id"), data.get("state"), data.get("deploy_ssl_url") or data.get("ssl_url"))
-          if not data.get("id"):
-              raise SystemExit("Netlify did not return a deploy id")
-          PY
+          python3 -c "import json, pathlib, sys; data=json.loads(pathlib.Path('deploy-response.json').read_text()); print('Netlify deploy:', data.get('id'), data.get('state'), data.get('deploy_ssl_url') or data.get('ssl_url')); sys.exit(0 if data.get('id') else 1)"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
