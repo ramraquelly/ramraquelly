@@ -14,7 +14,25 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Netlify
-        run: npx --yes netlify-cli deploy --dir=. --prod --message "Deploy from GitHub Actions"
+        shell: bash
+        run: |
+          set -euo pipefail
+          zip -r site.zip . \
+            -x ".git/*" ".netlify/*" "tmp/*" "site.zip"
+          curl --fail-with-body -sS \
+            -H "Authorization: Bearer ${NETLIFY_AUTH_TOKEN}" \
+            -H "Content-Type: application/zip" \
+            --data-binary @site.zip \
+            "https://api.netlify.com/api/v1/sites/${NETLIFY_SITE_ID}/deploys" \
+            > deploy-response.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("deploy-response.json").read_text())
+          print("Netlify deploy:", data.get("id"), data.get("state"), data.get("deploy_ssl_url") or data.get("ssl_url"))
+          if not data.get("id"):
+              raise SystemExit("Netlify did not return a deploy id")
+          PY
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
